@@ -1,8 +1,0 @@
-{
-	"array":[
-		{"index":"Test_Narration_01", "narrationText":"1번 나레이션입니다"},
-		{"index":"Test_Narration_02", "narrationText":"2번 나레이션입니다"},
-		{"index":"Test_Narration_03", "narrationText":"3번 나레이션입니다"},
-		{"index":"Test_Narration_04", "narrationText":"4번 나레이션입니다"}
-	]
-}
