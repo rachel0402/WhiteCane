@@ -9,12 +9,16 @@ public partial class SoundData//json
     {
         public string index;
         public string soundPath;
+
+        public AudioClip audioClip;
     }
   
 }
 public partial class SoundData
 {
     private Dictionary<string, SoundDataInformation> SoundDataInformationDictonary = default;
+   
+    const string soundFilePath = "Sound";
 
 }
 public partial class SoundData
@@ -28,6 +32,7 @@ public partial class SoundData
         Allocate();
         Setup();
     }
+
     private void Setup()
     {
         JsonParser jsonParser = MainSystem.Instance.ParserManager.JsonParser;
@@ -36,9 +41,23 @@ public partial class SoundData
 
         for (int index = 0; index < soundDataInformationArray.Length; index++)
         {
+            SoundDataInformation soundDataInformation = soundDataInformationArray[index];
+
+            soundDataInformation.audioClip = Resources.Load(soundFilePath+"/"+soundDataInformation.soundPath) as AudioClip;
+            
+
             SoundDataInformationDictonary.Add(soundDataInformationArray[index].index, soundDataInformationArray[index]);
         }
     }
 
 
+}
+public partial class SoundData
+{
+    public AudioClip GetAudioClip(string narrationName)
+    {
+
+        Debug.Log("사운드 스탑도 만들어야해");
+        return SoundDataInformationDictonary[narrationName].audioClip;
+    }
 }

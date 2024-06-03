@@ -6,6 +6,9 @@ using TMPro;
 
 public partial class UINarrationController : MonoBehaviour//data
 {
+    [SerializeField]
+    private AudioSource audioSource;
+
     //현재 index
     public int narrationIndex = 0;
 
@@ -52,9 +55,21 @@ public partial class UINarrationController : MonoBehaviour//fuction
         SetFrameActiveState(false);
         deactiveEvent?.Invoke();
     }
-    public void SetNarration(string narration)
+    public void SetNarrationText(string narrationTextValue)
     {
-        narrationText.text = narration;
+        narrationText.text = narrationTextValue;
+
+        //text만 나올껀지에 관한 controller도 만들면 좋을듯
+        //이건 text +sound
     }
-   
+    public void SetNarrationSound(string narrationName)
+    {
+        Debug.Log("사운드 넣을꺼면 여기로 고고");
+
+        audioSource.clip= MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName);
+        audioSource.Play();
+        //audioSource.PlayOneShot(MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName));
+
+    }
+
 }

@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //사운드 불러오고 playone shot하기
-public class SoundController : MonoBehaviour
+public partial class SoundDataController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private AudioSource audioSource;
 
-    // Update is called once per frame
-    void Update()
+}
+public partial class SoundDataController : MonoBehaviour
+{
+    private void Start()
     {
-        
+        ActiveSound();
+    }
+    public void ActiveSound()
+    {
+        audioSource.PlayOneShot(MainSystem.Instance.DataManager.SoundData.GetAudioClip("Test_Narration_01"));
     }
 }
