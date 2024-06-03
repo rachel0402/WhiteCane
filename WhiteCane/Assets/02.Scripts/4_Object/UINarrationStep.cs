@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public partial class UINarrationStep : MonoBehaviour
 {
     private int narrationStepIndex = 0;
-    int narrationMaxIndex = 0;
+    private int narrationMaxIndex = 0;
 
     //여기는 해당 narrationindex가 들어있는 value값을 모두 관리하는 list를 가지고 있고
     [SerializeField]
@@ -18,9 +18,9 @@ public partial class UINarrationStep : MonoBehaviour
 
 
     [SerializeField]
-    UnityEvent activeEvent;
+    private UnityEvent activeEvent;
     [SerializeField]
-    UnityEvent deactiveEvent;
+    private UnityEvent deactiveEvent;
 
 }
 public partial class UINarrationStep : MonoBehaviour
@@ -43,7 +43,7 @@ public partial class UINarrationStep : MonoBehaviour
             narrationTextList.Add(MainSystem.Instance.DataManager.NarrationData.GetNarration(narrationIndexList[i]));
         }
 
-        SetNarration();
+        SetNarrationText();
 
     }
 
@@ -56,17 +56,27 @@ public partial class UINarrationStep : MonoBehaviour
         deactiveEvent?.Invoke();
     }
 
-    public void SetNarration()
+    public void SetNarrationText()
     {
-        MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarration(narrationTextList[narrationStepIndex]);
+        MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarrationText(narrationTextList[narrationStepIndex]);
+
+
+        MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarrationSound(narrationIndexList[narrationStepIndex]);
+
+
     }
 
+    private void Reset()
+    {
+        narrationStepIndex = 0;
+    }
     public void NextStep()
     {
         //NARRATION INDEX를 맨 상위에서 불러야할듯
 
         if (narrationStepIndex == narrationMaxIndex)
         {
+            Debug.Log("frame 꺼야할듯~~");
             Deactive();
         }
 
@@ -75,7 +85,10 @@ public partial class UINarrationStep : MonoBehaviour
         {
             narrationStepIndex++;
         }
-        MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarration(narrationTextList[narrationStepIndex]);
+
+
+        MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarrationText(narrationTextList[narrationStepIndex]);
+        MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarrationSound(narrationIndexList[narrationStepIndex]);
 
     }
 
