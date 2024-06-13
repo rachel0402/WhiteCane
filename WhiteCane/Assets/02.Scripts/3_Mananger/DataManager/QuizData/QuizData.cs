@@ -15,6 +15,21 @@ public partial class QuizData//json
 		public string option_03;
 
 		public int wrongOption;
+
+		
+	}
+
+	public void AddQuizData(string index, string problem, string option1, string option2, string option3, int wrongOption)
+	{
+		QuizDataInformation quizData = new QuizDataInformation
+		{
+			index = index,
+			problem = problem,
+			option_01 = option1,
+			option_02 = option2,
+			option_03 = option3,
+			wrongOption = wrongOption
+		};
 	}
 }
 public partial class QuizData
@@ -59,5 +74,10 @@ public partial class QuizData
 	public List<QuizDataInformation> GetQuizDataInformationList()
     {
 		return new List<QuizDataInformation>(QuizDataInformationDictonary.Values);
+	}
+
+	public QuizDataInformation GetQuizObjectInformation(string quizIndexValue)
+	{
+		return  QuizDataInformationDictonary[quizIndexValue];
 	}
 }

@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+public partial class Cane : MonoBehaviour
+{
+    [SerializeField]
+    private UnityEvent triggerEnterEvent;
+    [SerializeField]
+    private UnityEvent triggerExitEvent;
+
+    string activeProbelmName;
+
+    Material outlineMaterial;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //만약 오브젝트에 닿았다면  or 손
+        CollierCheckObject collierObject = other.GetComponent<CollierCheckObject>();
+
+        if (collierObject != null)
+        {
+            activeProbelmName = collierObject.GetObjectName();
+            outlineMaterial = collierObject.GetMaterialShader();
+
+            SetEffectEnabled(true);
+            //exception code
+            Debug.Log("여기에 problem set하기");
+
+            //여기에 problem set하기
+            Debug.Log("enter");
+            triggerEnterEvent?.Invoke();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        SetEffectEnabled(false);
+
+        Debug.Log("exit");
+        triggerExitEvent?.Invoke();
+    }
+
+    void SetEffectEnabled(bool enabled)
+    {
+        outlineMaterial.SetFloat("_EffectEnabled", enabled ? 1.0f : 0.0f);
+    }
+
+
+}
