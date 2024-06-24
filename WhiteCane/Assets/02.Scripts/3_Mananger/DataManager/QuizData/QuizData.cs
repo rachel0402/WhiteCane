@@ -16,7 +16,8 @@ public partial class QuizData//json
 
 		public int wrongOption;
 
-		
+		public string soundPath;
+		public AudioClip soundClip;
 	}
 
 	public void AddQuizData(string index, string problem, string option1, string option2, string option3, int wrongOption)
@@ -35,12 +36,12 @@ public partial class QuizData//json
 public partial class QuizData
 {
 	private Dictionary<string, QuizDataInformation> QuizDataInformationDictonary = default;
-	public QuizDataController QuizDataController{ get; private set; } = default;
+	public QuizDataController QuizDataController { get; private set; } = default;
 }
 public partial class QuizData
 {
 	private void Allocate()
-    {
+	{
 		QuizDataInformationDictonary = new Dictionary<string, QuizDataInformation>();
 	}
 	public void Initialize()
@@ -50,14 +51,17 @@ public partial class QuizData
 	}
 
 	private void Setup()
-    {
+	{
 		JsonParser jsonParser = MainSystem.Instance.ParserManager.JsonParser;
 
 		QuizDataInformation[] quizDataInformationArray = jsonParser.LoadFromJson<QuizDataInformation>("Json/QuizData");
 
-		for(int index =0; index< quizDataInformationArray.Length; index++)
-        {
+		for (int index = 0; index < quizDataInformationArray.Length; index++)
+		{
 			QuizDataInformationDictonary.Add(quizDataInformationArray[index].index, quizDataInformationArray[index]);
+
+			Debug.Log("오디오 소스 로드");
+			quizDataInformationArray[index].soundClip = Resources.Load(quizDataInformationArray[index].soundPath) as AudioClip;
 		}
 
 	}
@@ -72,12 +76,12 @@ public partial class QuizData
 	}
 
 	public List<QuizDataInformation> GetQuizDataInformationList()
-    {
+	{
 		return new List<QuizDataInformation>(QuizDataInformationDictonary.Values);
 	}
 
 	public QuizDataInformation GetQuizObjectInformation(string quizIndexValue)
 	{
-		return  QuizDataInformationDictonary[quizIndexValue];
+		return QuizDataInformationDictonary[quizIndexValue];
 	}
 }

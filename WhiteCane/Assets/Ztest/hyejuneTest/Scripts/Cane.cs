@@ -14,19 +14,27 @@ public partial class Cane : MonoBehaviour
 
     Material outlineMaterial;
 
+
+    CollierCheckObject currentCollierObject;
+
     private void OnTriggerEnter(Collider other)
     {
         //만약 오브젝트에 닿았다면  or 손
-        CollierCheckObject collierObject = other.GetComponent<CollierCheckObject>();
+        currentCollierObject = other.GetComponent<CollierCheckObject>();
 
-        if (collierObject != null)
+        if (currentCollierObject != null)
         {
-            activeProbelmName = collierObject.GetObjectName();
-            outlineMaterial = collierObject.GetMaterialShader();
+            activeProbelmName = currentCollierObject.GetObjectName();
+
+            Debug.Log(activeProbelmName);
+            outlineMaterial = currentCollierObject.GetMaterialShader();
 
             SetEffectEnabled(true);
             //exception code
-            Debug.Log("여기에 problem set하기");
+
+
+        Debug.Log("문제 세팅");
+            currentCollierObject.Active();
 
             //여기에 problem set하기
             Debug.Log("enter");
@@ -37,7 +45,8 @@ public partial class Cane : MonoBehaviour
     {
         SetEffectEnabled(false);
 
-        Debug.Log("exit");
+
+        Debug.Log("여기에 DEACTIVE 추가해주가");
         triggerExitEvent?.Invoke();
     }
 

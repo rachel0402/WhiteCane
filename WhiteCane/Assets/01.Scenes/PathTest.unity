@@ -401,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjectName: 1
   meshRenderer: {fileID: 41861370}
-  index: 0
+  ountlineIndex: 1
 --- !u!1 &75587632
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjectName: 6
   meshRenderer: {fileID: 0}
-  index: 0
+  ountlineIndex: 1
 --- !u!1 &168081867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,7 +2130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &683593113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3931,7 +3931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjectName: 7
   meshRenderer: {fileID: 0}
-  index: 0
+  ountlineIndex: 1
 --- !u!1 &1081444832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,7 +4076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjectName: 2
   meshRenderer: {fileID: 1081444835}
-  index: 0
+  ountlineIndex: 1
 --- !u!1 &1086927969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,7 +4478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjectName: 8
   meshRenderer: {fileID: 0}
-  index: 0
+  ountlineIndex: 1
 --- !u!1 &1103270845
 GameObject:
   m_ObjectHideFlags: 0
@@ -5750,7 +5750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjectName: 5
   meshRenderer: {fileID: 0}
-  index: 0
+  ountlineIndex: 1
 --- !u!1 &1559217051
 GameObject:
   m_ObjectHideFlags: 0
@@ -6603,7 +6603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjectName: 4
   meshRenderer: {fileID: 0}
-  index: 0
+  ountlineIndex: 1
 --- !u!1 &1709037354
 GameObject:
   m_ObjectHideFlags: 0
@@ -8072,7 +8072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObjectName: 3
   meshRenderer: {fileID: 0}
-  index: 0
+  ountlineIndex: 1
 --- !u!1 &2086153854
 GameObject:
   m_ObjectHideFlags: 0
