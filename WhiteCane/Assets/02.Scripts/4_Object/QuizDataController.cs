@@ -43,6 +43,10 @@ public partial class QuizDataController : MonoBehaviour
     [SerializeField]
     UnityEvent problemFinishEvent;
 
+    [SerializeField]
+    UnityEvent problemCorrectEvent;
+
+    private QuizData.QuizDataInformation currenQuizObjectInformation;
 }
 public partial class QuizDataController : MonoBehaviour
 {
@@ -59,10 +63,15 @@ public partial class QuizDataController : MonoBehaviour
     {
         Allocate();
     }
+
+    public void SetActiveFrameState(bool state)
+    {
+        frame.SetActive(state);
+    }
+
     public void Load()
     {
         quizDataInformationList = MainSystem.Instance.DataManager.QuizData.GetQuizDataInformationList();
-
 
         //quiz object를 보기 갯수만큼 생성
         for (int i = 0; i < maxOptionCount; i++)
@@ -74,7 +83,7 @@ public partial class QuizDataController : MonoBehaviour
     }
     public void Start()
     {
-        SetProblem();
+       // SetProblem("bird);
     }
 
 
@@ -94,27 +103,57 @@ public partial class QuizDataController : MonoBehaviour
     }
 
     //setproblem
-    public void SetProblem()
+    public void SetProblem(string problemName)
     {
         Reset();
+     
+        //사운드 세팅는 선택된 오브젝트에 사운드르 세팅!! 여기 수정하기 
+
+
+
+        currenQuizObjectInformation = MainSystem.Instance.DataManager.QuizData.GetQuizObjectInformation(problemName);
+
+        problem.text = currenQuizObjectInformation.problem;
 
         //현재 문제마다의 OPTION을 리스트로 따로 저장해두기 
-        currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_01);
-        currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_02);
-        currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_03);
+        currentOptionTextList.Add(currenQuizObjectInformation.option_01);
+        currentOptionTextList.Add(currenQuizObjectInformation.option_02);
+        currentOptionTextList.Add(currenQuizObjectInformation.option_03);
 
         //틀린문제 set bool state
-        quizOptionList[quizDataInformationList[currentProblemIndex].wrongOption].SetOptionState(false);
+        quizOptionList[currenQuizObjectInformation.wrongOption].SetOptionState(false);
 
         //set text
         for (int i = 0; i < quizOptionList.Count; i++)
         {
             quizOptionList[i].SetOptionInformationText(currentOptionTextList[i]);
         }
+
+
+
+        //Reset();
+
+
+        //problem.text = quizDataInformationList[currentProblemIndex].problem;
+
+        ////현재 문제마다의 OPTION을 리스트로 따로 저장해두기 
+        //currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_01);
+        //currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_02);
+        //currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_03);
+
+        ////틀린문제 set bool state
+        //quizOptionList[quizDataInformationList[currentProblemIndex].wrongOption].SetOptionState(false);
+
+        ////set text
+        //for (int i = 0; i < quizOptionList.Count; i++)
+        //{
+        //    quizOptionList[i].SetOptionInformationText(currentOptionTextList[i]);
+        //}
     }
 
     public void NextProblem()
     {
+        problemCorrectEvent?.Invoke();
 
         //exception Code
         if (currentProblemIndex < quizDataInformationList.Count)
@@ -141,7 +180,7 @@ public partial class QuizDataController : MonoBehaviour
             //밖에서 event 연결해주기
             Debug.Log("문제 다xxx");
 
-            SetProblem();
+           // SetProblem();
             problemSetEvent.Invoke();
         }
     }

@@ -36,7 +36,7 @@ public partial class PathObject : MonoBehaviour
         {
             //이건 그냥 시각화 할려구 넣어둔 코드
             meshRenderer.material = selectMaterial;
-            SetProblem("Test__Quiz_01");
+           // SetProblem("Test__Quiz_01");
 
             isPathActive = true;
             activeEvent?.Invoke();
@@ -57,14 +57,16 @@ public partial class PathObject : MonoBehaviour
         finishEvent?.Invoke();
     }
 
-    QuizData.QuizDataInformation QuizDataobj;
+   // QuizData.QuizDataInformation QuizDataobj;
 
-    public void SetProblem(string myindex)
-    {
-        QuizDataobj = MainSystem.Instance.DataManager.QuizData.GetQuizObjectInformation(myindex);
-    }
+  //  public void SetProblem(string myindex)
+ //   {
+      //  QuizDataobj = MainSystem.Instance.DataManager.QuizData.GetQuizObjectInformation(myindex);
+ //   }
     public void NextPathObjectActive()
     {
+
+
         for (int i = 0; i < nextPathObjectList.Count; i++)
         {
             //얘가 false여야지만 active 하기
