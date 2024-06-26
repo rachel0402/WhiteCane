@@ -28,6 +28,8 @@ public partial class CollierCheckObject : MonoBehaviour
         //딱한 번만 ACTIVE
         Debug.Log("문제 세팅");
         MainSystem.Instance.DataManager.QuizData.QuizDataController.SetProblem(myObjectName);
+
+        activeEvent?.Invoke();
     }
     public void Deactive()
     {
