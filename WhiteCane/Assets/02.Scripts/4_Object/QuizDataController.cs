@@ -153,6 +153,8 @@ public partial class QuizDataController : MonoBehaviour
 
     public void NextProblem()
     {
+
+        Debug.Log("active한 문제 비활성화하기 다시 선택되어도-> 콜라이더 끄면됨");
         problemCorrectEvent?.Invoke();
 
         //exception Code
