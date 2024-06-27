@@ -13,9 +13,6 @@ public partial class QuizOption : MonoBehaviour
 
     [SerializeField]
     private bool isTrue = true;
-
-    //내 문제 번호도 있어야하나?
-
    
 }
 public partial class QuizOption : MonoBehaviour
@@ -28,7 +25,7 @@ public partial class QuizOption : MonoBehaviour
         }
         else
         {
-            MainSystem.Instance.DataManager.QuizData.QuizDataController.NextProblem();
+           // MainSystem.Instance.DataManager.QuizData.QuizDataController.NextProblem();
             Debug.Log("맞았어용!! 다음문제로 ㄱㄱ");
         }
     }

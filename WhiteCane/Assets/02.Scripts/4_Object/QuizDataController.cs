@@ -15,27 +15,9 @@ public partial class QuizDataController : MonoBehaviour
     private GameObject frame;
 
     [SerializeField]
-    private QuizOption quizOptionPrefab;
-    [SerializeField]
-    private Transform optionParent;
-    [SerializeField]
     private TMP_Text problem;
 
-    //보기 오브젝트 생성
-    [SerializeField]
-    private List<QuizOption> quizOptionList = new List<QuizOption>();
-
-
-    private List<QuizData.QuizDataInformation> quizDataInformationList = new List<QuizData.QuizDataInformation>();
-
-    private List<string> currentOptionTextList = new List<string>();
-
-    //현재 문제번호
-    private int currentProblemIndex;
-
-    //생성할 보기에 갯수
-    private const int maxOptionCount = 3;
-
+    public QuizObject currentquizObject { get; private set; }
 
     [SerializeField]
     UnityEvent problemSetEvent;
@@ -46,7 +28,6 @@ public partial class QuizDataController : MonoBehaviour
     [SerializeField]
     UnityEvent problemCorrectEvent;
 
-    private QuizData.QuizDataInformation currenQuizObjectInformation;
 }
 public partial class QuizDataController : MonoBehaviour
 {
@@ -57,7 +38,6 @@ public partial class QuizDataController : MonoBehaviour
 
     public void Allocate()
     {
-        Load();
     }
     public void Initialize()
     {
@@ -69,121 +49,45 @@ public partial class QuizDataController : MonoBehaviour
         frame.SetActive(state);
     }
 
-    public void Load()
+   public void ActiveQuizObject(QuizObject quizObject)
     {
-        quizDataInformationList = MainSystem.Instance.DataManager.QuizData.GetQuizDataInformationList();
-
-        //quiz object를 보기 갯수만큼 생성
-        for (int i = 0; i < maxOptionCount; i++)
-        {
-            QuizOption optionPrefab = QuizOption.Instantiate(quizOptionPrefab, optionParent);
-
-            quizOptionList.Add(optionPrefab);
-        }
-    }
-    public void Start()
-    {
-       // SetProblem("bird);
+        currentquizObject = quizObject;
+        //그래야지 음성인식 가능함
     }
 
+    //public void NextProblem()
+    //{
 
-    //현재 
+    //    Debug.Log("active한 문제 비활성화하기 다시 선택되어도-> 콜라이더 끄면됨");
+    //    problemCorrectEvent?.Invoke();
 
-    private void Reset()
-    {
-        currentOptionTextList.Clear();
+    //    //exception Code
+    //    if (currentProblemIndex < quizDataInformationList.Count)
+    //    {
+    //        currentProblemIndex++;
+    //    }
+    //        Debug.Log(currentProblemIndex);
 
-        //quizDataInformationList는 CLEAR 하면 안됨, 그 안에 데이터는 CLEAR 해도 ㄱㅊ
+    //    EndCheck();
+    //}
 
-        for (int i = 0; i < quizOptionList.Count; i++)
-        {
-            quizOptionList[i].SetOptionState(true);
-        }
+    //public void EndCheck()
+    //{
+    //    //문제를 다 맞추었을 경우
 
-    }
+    //    if (currentProblemIndex >= quizDataInformationList.Count)
+    //    {
+    //        frame.SetActive(false);
+    //        Debug.Log("문제 다풀었어요");
+    //        problemFinishEvent?.Invoke();
+    //    }
+    //    else
+    //    {
+    //        //밖에서 event 연결해주기
+    //        Debug.Log("문제 다xxx");
 
-    //setproblem
-    public void SetProblem(string problemName)
-    {
-        Reset();
-     
-        //사운드 세팅는 선택된 오브젝트에 사운드르 세팅!! 여기 수정하기 
-
-
-
-        currenQuizObjectInformation = MainSystem.Instance.DataManager.QuizData.GetQuizObjectInformation(problemName);
-
-        problem.text = currenQuizObjectInformation.problem;
-
-        //현재 문제마다의 OPTION을 리스트로 따로 저장해두기 
-        currentOptionTextList.Add(currenQuizObjectInformation.option_01);
-        currentOptionTextList.Add(currenQuizObjectInformation.option_02);
-        currentOptionTextList.Add(currenQuizObjectInformation.option_03);
-
-        //틀린문제 set bool state
-        quizOptionList[currenQuizObjectInformation.wrongOption].SetOptionState(false);
-
-        //set text
-        for (int i = 0; i < quizOptionList.Count; i++)
-        {
-            quizOptionList[i].SetOptionInformationText(currentOptionTextList[i]);
-        }
-
-
-
-        //Reset();
-
-
-        //problem.text = quizDataInformationList[currentProblemIndex].problem;
-
-        ////현재 문제마다의 OPTION을 리스트로 따로 저장해두기 
-        //currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_01);
-        //currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_02);
-        //currentOptionTextList.Add(quizDataInformationList[currentProblemIndex].option_03);
-
-        ////틀린문제 set bool state
-        //quizOptionList[quizDataInformationList[currentProblemIndex].wrongOption].SetOptionState(false);
-
-        ////set text
-        //for (int i = 0; i < quizOptionList.Count; i++)
-        //{
-        //    quizOptionList[i].SetOptionInformationText(currentOptionTextList[i]);
-        //}
-    }
-
-    public void NextProblem()
-    {
-
-        Debug.Log("active한 문제 비활성화하기 다시 선택되어도-> 콜라이더 끄면됨");
-        problemCorrectEvent?.Invoke();
-
-        //exception Code
-        if (currentProblemIndex < quizDataInformationList.Count)
-        {
-            currentProblemIndex++;
-        }
-            Debug.Log(currentProblemIndex);
-
-        EndCheck();
-    }
-
-    public void EndCheck()
-    {
-        //문제를 다 맞추었을 경우
-
-        if (currentProblemIndex >= quizDataInformationList.Count)
-        {
-            frame.SetActive(false);
-            Debug.Log("문제 다풀었어요");
-            problemFinishEvent?.Invoke();
-        }
-        else
-        {
-            //밖에서 event 연결해주기
-            Debug.Log("문제 다xxx");
-
-           // SetProblem();
-            problemSetEvent.Invoke();
-        }
-    }
+    //       // SetProblem();
+    //        problemSetEvent.Invoke();
+    //    }
+    //}
 }
