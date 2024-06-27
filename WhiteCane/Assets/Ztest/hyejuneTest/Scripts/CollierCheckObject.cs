@@ -39,7 +39,16 @@ public partial class CollierCheckObject : MonoBehaviour
     {
         return myObjectName;
     }
-
+    [SerializeField]
+    private GameObject particle;
+    public void DistanceEnter()
+    {
+        particle.SetActive(true);
+    }
+    public void DistanceExit()
+    {
+        particle.SetActive(false);
+    }
     public Material GetMaterialShader()
     {
         //내꺼에 대한 해당 오브젝트만

@@ -60,7 +60,7 @@ public partial class QuizData
 		{
 			QuizDataInformationDictonary.Add(quizDataInformationArray[index].index, quizDataInformationArray[index]);
 
-			Debug.Log("오디오 소스 로드");
+			//Debug.Log("오디오 소스 로드");
 			quizDataInformationArray[index].soundClip = Resources.Load(quizDataInformationArray[index].soundPath) as AudioClip;
 		}
 
