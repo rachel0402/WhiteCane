@@ -7,31 +7,16 @@ public partial class QuizData//json
 	[Serializable]
 	public class QuizDataInformation
 	{
-		public string index;
+		public string quizName;
 		public string problem;
-
-		public string option_01;
-		public string option_02;
-		public string option_03;
-
-		public int wrongOption;
+		
+		public string correctAnswer;
 
 		public string soundPath;
 		public AudioClip soundClip;
 	}
 
-	public void AddQuizData(string index, string problem, string option1, string option2, string option3, int wrongOption)
-	{
-		QuizDataInformation quizData = new QuizDataInformation
-		{
-			index = index,
-			problem = problem,
-			option_01 = option1,
-			option_02 = option2,
-			option_03 = option3,
-			wrongOption = wrongOption
-		};
-	}
+	
 }
 public partial class QuizData
 {
@@ -58,7 +43,7 @@ public partial class QuizData
 
 		for (int index = 0; index < quizDataInformationArray.Length; index++)
 		{
-			QuizDataInformationDictonary.Add(quizDataInformationArray[index].index, quizDataInformationArray[index]);
+			QuizDataInformationDictonary.Add(quizDataInformationArray[index].quizName, quizDataInformationArray[index]);
 
 			//Debug.Log("오디오 소스 로드");
 			quizDataInformationArray[index].soundClip = Resources.Load(quizDataInformationArray[index].soundPath) as AudioClip;
