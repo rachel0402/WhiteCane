@@ -17,6 +17,7 @@ public partial class Cane : MonoBehaviour
 
     CollierCheckObject currentCollierObject;
 
+    
     private void OnTriggerEnter(Collider other)
     {
         //만약 오브젝트에 닿았다면  or 손
@@ -33,7 +34,7 @@ public partial class Cane : MonoBehaviour
             //exception code
 
 
-        Debug.Log("문제 세팅");
+            Debug.Log("문제 세팅");
             currentCollierObject.Active();
 
             //여기에 problem set하기

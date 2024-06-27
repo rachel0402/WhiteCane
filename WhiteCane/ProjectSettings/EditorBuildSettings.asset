@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/01.Scenes/InitializeScene.unity
     guid: 89e69bf2f18f224418ebb79a220851fe
   - enabled: 0
@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Ztest/hyejuneTest/Scene/JsonTest.unity
     guid: 68b475f1ff5f6ee48a4c1d494438233a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Ztest/hyejuneTest/Scene/NarrationTestScene.unity
     guid: 9b3c0cd526a8f6b438cedfa137c040a3
   - enabled: 0
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Ztest/hyejuneTest/Scene/QuizDataTestScene.unity
     guid: 194259e85faa6f746bc5337f62983b6b
-  - enabled: 0
+  - enabled: 1
     path: Assets/01.Scenes/NatureQuiz.unity
     guid: e3e709c7e04d31e42a07290b86af12af
   - enabled: 0
