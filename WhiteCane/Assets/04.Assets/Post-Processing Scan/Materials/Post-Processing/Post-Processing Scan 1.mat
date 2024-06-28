@@ -30,7 +30,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CustomTime: 0.91028625
+    - _CustomTime: 0.9013332
     - _Mask: 1
     - _MaskHardness: 0.62
     - _MaskPower: 1
