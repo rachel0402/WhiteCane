@@ -22,6 +22,7 @@ public partial class UINarrationStep : MonoBehaviour
     [SerializeField]
     private UnityEvent deactiveEvent;
 
+    private bool isSelect = false;
 }
 public partial class UINarrationStep : MonoBehaviour
 {
@@ -29,7 +30,17 @@ public partial class UINarrationStep : MonoBehaviour
     {
         Initialize();
     }
+    public void Update()
+    {
+        if (isSelect)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                NextStep();
+            }
+        }
 
+    }
     public void Initialize()
     {
         narrationMaxIndex = narrationIndexList.Count - 1;
@@ -42,41 +53,41 @@ public partial class UINarrationStep : MonoBehaviour
         {
             narrationTextList.Add(MainSystem.Instance.DataManager.NarrationData.GetNarration(narrationIndexList[i]));
         }
-
-        SetNarrationText();
-
     }
 
     public void Active()
     {
+        narrationStepIndex = 0;
+
+        isSelect = true;
+        SetNarration();
+        MainSystem.Instance.DataManager.NarrationData.UINarrationController.Active();
         activeEvent?.Invoke();
     }
     public void Deactive()
     {
+        isSelect = false;
         deactiveEvent?.Invoke();
     }
 
-    public void SetNarrationText()
+    private void SetNarration()
     {
         MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarrationText(narrationTextList[narrationStepIndex]);
-
-
         MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarrationSound(narrationIndexList[narrationStepIndex]);
 
-
     }
 
-    private void Reset()
-    {
-        narrationStepIndex = 0;
-    }
+    //private void Reset()
+    //{
+    //    narrationStepIndex = 0;
+    //}
     public void NextStep()
     {
         //NARRATION INDEX를 맨 상위에서 불러야할듯
 
         if (narrationStepIndex == narrationMaxIndex)
         {
-            Debug.Log("frame 꺼야할듯~~");
+            MainSystem.Instance.DataManager.NarrationData.UINarrationController.Deactive();
             Deactive();
         }
 
@@ -84,11 +95,10 @@ public partial class UINarrationStep : MonoBehaviour
         if (narrationStepIndex < narrationIndexList.Count - 1)
         {
             narrationStepIndex++;
+            SetNarration();
         }
 
 
-        MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarrationText(narrationTextList[narrationStepIndex]);
-        MainSystem.Instance.DataManager.NarrationData.UINarrationController.SetNarrationSound(narrationIndexList[narrationStepIndex]);
 
     }
 

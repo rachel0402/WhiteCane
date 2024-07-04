@@ -1,7 +1,13 @@
 {
 	"array":[
-		{"index":"Test__Quiz_01", "problem":"어떤 소리인지 맞춰보세요1", "option_01":"나뭇잎", "option_02":"폭포", "option_03":"바다", "wrongOption":0},
-		{"index":"Test__Quiz_02", "problem":"어떤 소리인지 맞춰보세요2", "option_01":"토끼", "option_02":"거북이", "option_03":"매뚜기", "wrongOption":1},
-		{"index":"Test__Quiz_03", "problem":"어떤 소리인지 맞춰보세요3", "option_01":"그네", "option_02":"시소", "option_03":"미끄럼틀", "wrongOption":2}
+		{"quizName":"bird", "problem":"어떤 소리인지 맞춰보세요1", "correctAnswer":"bird", "soundPath":"QuizSound/test01"},
+		{"quizName":"falls", "problem":"어떤 소리인지 맞춰보세요2", "correctAnswer":"falls", "soundPath":"QuizSound/test02"},
+		{"quizName":"swing", "problem":"어떤 소리인지 맞춰보세요3", "correctAnswer":"swing", "soundPath":"QuizSound/test01"},
+		{"quizName":"squirrel", "problem":"어떤 소리인지 맞춰보세요4", "correctAnswer":"squirrel", "soundPath":"QuizSound/test02"},
+		{"quizName":"pond", "problem":"어떤 소리인지 맞춰보세요5", "correctAnswer":"pond", "soundPath":"QuizSound/test01"},
+		{"quizName":"camp", "problem":"어떤 소리인지 맞춰보세요6", "correctAnswer":"camp", "soundPath":"QuizSound/test02"},
+		{"quizName":"deer", "problem":"어떤 소리인지 맞춰보세요7", "correctAnswer":"deer", "soundPath":"QuizSound/test01"},
+		{"quizName":"mushroom", "problem":"어떤 소리인지 맞춰보세요8", "correctAnswer":"mushroom", "soundPath":"QuizSound/test02"},
+		{"quizName":"owl", "problem":"어떤 소리인지 맞춰보세요9", "correctAnswer":"owl", "soundPath":"QuizSound/test01"}
 	]
 }

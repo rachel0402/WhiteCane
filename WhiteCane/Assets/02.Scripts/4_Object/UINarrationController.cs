@@ -7,22 +7,22 @@ using TMPro;
 public partial class UINarrationController : MonoBehaviour//data
 {
     [SerializeField]
+    private GameObject frame;
+
+    [SerializeField]
     private AudioSource audioSource;
 
     //현재 index
     public int narrationIndex = 0;
 
     [SerializeField]
-    TMP_Text narrationText;
-
-    [SerializeField]
-    GameObject frame;
+    private TMP_Text narrationText;
 
 
     [SerializeField]
-    UnityEvent activeEvent;
+    private UnityEvent activeEvent;
     [SerializeField]
-    UnityEvent deactiveEvent;
+    private UnityEvent deactiveEvent;
 }
 public partial class UINarrationController : MonoBehaviour//initialze
 {
@@ -53,6 +53,7 @@ public partial class UINarrationController : MonoBehaviour//fuction
     public void Deactive()
     {
         SetFrameActiveState(false);
+        audioSource.Stop();
         deactiveEvent?.Invoke();
     }
     public void SetNarrationText(string narrationTextValue)
@@ -66,7 +67,7 @@ public partial class UINarrationController : MonoBehaviour//fuction
     {
         Debug.Log("사운드 넣을꺼면 여기로 고고");
 
-        audioSource.clip= MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName);
+        audioSource.clip = MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName);
         audioSource.Play();
         //audioSource.PlayOneShot(MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName));
 

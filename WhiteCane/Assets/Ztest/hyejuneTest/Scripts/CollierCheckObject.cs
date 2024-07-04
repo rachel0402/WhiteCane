@@ -6,25 +6,44 @@ using UnityEngine.Events;
 public partial class CollierCheckObject : MonoBehaviour
 {
     [SerializeField]
-    string myObjectName;
+    private GameObject particle;
+
+
+    //[SerializeField]
+    //MeshRenderer meshRenderer;
+
+    //[SerializeField]
+    //int ountlineIndex= 1;
 
     [SerializeField]
-    MeshRenderer meshRenderer;
-
+    private UnityEvent activeEvent;
     [SerializeField]
-    int ountlineIndex= 1;
-
+    private UnityEvent deactiveEvent;
 }
 public partial class CollierCheckObject : MonoBehaviour
 {
-    public string GetObjectName()
+    public void Active()
     {
-        return myObjectName;
+        activeEvent?.Invoke();
+    }
+    public void Deactive()
+    {
+        deactiveEvent?.Invoke();
     }
 
-    public Material GetMaterialShader()
+    public void DistanceEnter()
     {
-        //내꺼에 대한 해당 오브젝트만
-        return meshRenderer.materials[ountlineIndex];
+        //Distance Check
+        particle.SetActive(true);
     }
+    public void DistanceExit()
+    {
+        particle.SetActive(false);
+    }
+
+    //public Material GetMaterialShader()
+    //{
+    //    //내꺼에 대한 해당 오브젝트만
+    //    return meshRenderer.materials[ountlineIndex];
+    //}
 }
