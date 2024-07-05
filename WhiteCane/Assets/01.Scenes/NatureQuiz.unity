@@ -4900,7 +4900,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
@@ -5454,7 +5454,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
@@ -7765,7 +7765,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
@@ -8067,7 +8067,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
@@ -8365,7 +8365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
+  m_RequiresDepthTextureOption: 1
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
@@ -8375,7 +8375,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -13773,7 +13773,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
@@ -14921,7 +14921,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
@@ -15463,7 +15463,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
@@ -16513,7 +16513,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
@@ -18809,7 +18809,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 11700000, guid: 34bc6b78588a2a54b8a462d87de5c590, type: 2}
+      - m_Value: {fileID: 0}
         m_Name: SDF
         m_Overridden: 1
     m_Bool:
