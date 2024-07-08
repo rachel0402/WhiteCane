@@ -11,10 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/XR Interaction Toolkit/3.0.3/Starter Assets/DemoScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
+  - enabled: 1
+    path: Assets/01.Scenes/Lobby.unity
+    guid: 532990dcebdfc1e43bb2ffa647196216
   - enabled: 0
     path: Assets/Ztest/hyejuneTest/Scene/sPEECHDemoScene.unity
     guid: 723858bc5e080ed43a96c23920f38e42
-  - enabled: 1
+  - enabled: 0
     path: Assets/01.Scenes/NatureScanner.unity
     guid: 722352e538b170f479864db87ef5e2c9
   - enabled: 0
@@ -29,7 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Ztest/hyejuneTest/Scene/QuizDataTestScene.unity
     guid: 194259e85faa6f746bc5337f62983b6b
-  - enabled: 0
+  - enabled: 1
     path: Assets/01.Scenes/NatureQuiz.unity
     guid: e3e709c7e04d31e42a07290b86af12af
   - enabled: 0

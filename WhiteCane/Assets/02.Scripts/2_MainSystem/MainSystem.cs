@@ -29,6 +29,6 @@ public partial class MainSystem : GenericSingleton<MainSystem> //data field
     {
         Initialize();
 
-        SceneManager.LoadScene("NatureQuiz");
+        SceneManager.LoadScene("Lobby");
     }
 }
