@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoad : MonoBehaviour
 {
-    public void SceneLoadActive(string sceneName)
+    private string sceneName;
+
+    public void SceneLoadActive()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
+    }
+
+    public void GetSceneName(string sceneNameValue)
+    {
+        sceneName = sceneNameValue;
     }
 }
