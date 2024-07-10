@@ -23,18 +23,32 @@ public class ControllerInputAction : MonoBehaviour
     public void Update()
     {
         StickMove();
+        Button();
     }
 
     bool isMove = false;
     bool isStop = false;
 
 
-    bool isSelect = false;
+    float isSelect =0;
     public void Button()
     {
         //  button.action.
 
-        isSelect = button.action.ReadValue<bool>();
+        isSelect = button.action.ReadValue<float>();
+
+        if(isSelect==0)
+        {
+
+            Debug.Log("버튼xxx");
+            Debug.Log(isSelect);
+        }
+        else
+        {
+                Debug.Log("버튼눌림");
+            Debug.Log(isSelect);
+
+        }
     }
     public void StickMove()
     {
