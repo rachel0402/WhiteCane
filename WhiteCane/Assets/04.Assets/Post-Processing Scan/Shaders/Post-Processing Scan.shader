@@ -134,7 +134,7 @@ Shader "Mirza Beig/Post-Processing Scan"
 
                     // ase common template code
                     float2 uv_MainTex = i.uv.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-                    float4 ScreenColour19 = tex2D(_MainTex, uv_MainTex);
+                    float4 ScreenColour19 = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, uv_MainTex);
                     float4 lerpResult158 = lerp(_Colour , (_Colour * ScreenColour19) , _MultiplyBlend);
                     float4 ScanColour88 = lerpResult158;
                     float4 screenPos = i.ase_texcoord4;
