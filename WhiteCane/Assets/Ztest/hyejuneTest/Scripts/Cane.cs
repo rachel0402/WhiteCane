@@ -6,7 +6,7 @@ public partial class Cane : MonoBehaviour
 {
     QuizObject quizObject;
 
-
+    //SpeechRecognition ;
     [SerializeField]
     private UnityEvent triggerEnterEvent;
     [SerializeField]
@@ -35,7 +35,10 @@ public partial class Cane : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        triggerExitEvent?.Invoke();
+        if (quizObject != null)
+        {
+            triggerExitEvent?.Invoke();
+        }
     }
 
 

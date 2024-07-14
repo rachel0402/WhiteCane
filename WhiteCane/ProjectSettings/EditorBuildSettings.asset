@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/01.Scenes/InitializeScene.unity
     guid: 89e69bf2f18f224418ebb79a220851fe
   - enabled: 0
@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Ztest/hyejuneTest/Scene/sPEECHDemoScene.unity
     guid: 723858bc5e080ed43a96c23920f38e42
-  - enabled: 0
+  - enabled: 1
     path: Assets/01.Scenes/NatureScanner.unity
     guid: 722352e538b170f479864db87ef5e2c9
   - enabled: 0
