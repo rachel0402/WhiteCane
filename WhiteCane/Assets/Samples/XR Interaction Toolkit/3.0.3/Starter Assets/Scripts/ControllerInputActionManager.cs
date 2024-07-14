@@ -142,14 +142,17 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_NearFarInteractor.uiHoverEntered.AddListener(OnUIHoverEntered);
                 m_NearFarInteractor.uiHoverExited.AddListener(OnUIHoverExited);
                 m_BindingsGroup.AddBinding(m_NearFarInteractor.selectionRegion.Subscribe(OnNearFarSelectionRegionChanged));
+
+
             }
-            
+
             if (m_RayInteractor != null)
             {
                 m_RayInteractor.selectEntered.AddListener(OnRaySelectEntered);
                 m_RayInteractor.selectExited.AddListener(OnRaySelectExited);
                 m_RayInteractor.uiHoverEntered.AddListener(OnUIHoverEntered);
                 m_RayInteractor.uiHoverExited.AddListener(OnUIHoverExited);
+
             }
 
             var teleportModeAction = GetInputAction(m_TeleportMode);
@@ -159,11 +162,13 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 teleportModeAction.performed += OnStartLocomotion;
                 teleportModeAction.canceled += OnCancelTeleport;
                 teleportModeAction.canceled += OnStopLocomotion;
+
             }
 
             var teleportModeCancelAction = GetInputAction(m_TeleportModeCancel);
             if (teleportModeCancelAction != null)
             {
+
                 teleportModeCancelAction.performed += OnCancelTeleport;
             }
 
@@ -172,6 +177,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 moveAction.started += OnStartLocomotion;
                 moveAction.canceled += OnStopLocomotion;
+
             }
 
             var turnAction = GetInputAction(m_Turn);
@@ -179,6 +185,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 turnAction.started += OnStartLocomotion;
                 turnAction.canceled += OnStopLocomotion;
+
             }
 
             var snapTurnAction = GetInputAction(m_SnapTurn);
@@ -186,6 +193,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             {
                 snapTurnAction.started += OnStartLocomotion;
                 snapTurnAction.canceled += OnStopLocomotion;
+
             }
         }
 
@@ -358,6 +366,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             if (m_StartCalled)
             {
                 UpdateLocomotionActions();
+
                 UpdateUIActions();
             }
 
@@ -404,6 +413,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             // Disable ability to turn when using continuous movement
             SetEnabled(m_Turn, !m_SmoothMotionEnabled && m_SmoothTurnEnabled);
             SetEnabled(m_SnapTurn, !m_SmoothMotionEnabled && !m_SmoothTurnEnabled);
+
         }
 
         void DisableTeleportActions()
