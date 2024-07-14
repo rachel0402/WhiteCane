@@ -341,8 +341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 0}
   m_HandShapeOrPose: {fileID: 0}
-  m_TargetTransform: {fileID: 0}
-  m_Background: {fileID: 0}
+  m_TargetRelativeOrientation:
+    m_HandOrientationConditions: []
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -375,5 +375,3 @@ MonoBehaviour:
         m_CallState: 2
   m_MinimumHoldTime: 0.2
   m_GestureDetectionInterval: 0.1
-  m_Highlight: {fileID: 0}
-  m_StaticGestures: []
