@@ -1,8 +1,23 @@
 {
 	"array":[
-		{"index":"Test_Narration_01", "narrationText":"씬 시작 멘트 입니다"},
-		{"index":"Test_Narration_02", "narrationText":"narration data에 있습니다"},
-		{"index":"Test_Narration_03", "narrationText":"3번 나레이션"},
-		{"index":"Test_Narration_04", "narrationText":"4번 나레이션"}
+		{"index":"intro_01", "narrationText":"whitecane에 오신 여러분 환영합니다."},
+		{"index":"intro_02", "narrationText":"지금부터 여러분의 시각 일부를 제한하고 청각과 촉감에 의존하여 떠나는 색다른 모험으로 안내하겠습니다."},
+		{"index":"tutorial01", "narrationText":"시작하기 앞서 게임의 방법을 소개해드리겠습니다"},
+		{"index":"tutorial02", "narrationText":"물체를 맞추는 방법에 대해 알려드리겠습니다"},
+		{"index":"tutorial03", "narrationText":"a를 꾹 눌러 녹음을 진행하고 버튼을 땝니다"},
+		{"index":"tutorial04", "narrationText":"한번해볼까요?"},
+		{"index":"tutorial05", "narrationText":"잘하셨습니다"},
+		{"index":"tutorial06", "narrationText":"이제 지팡이를 드리겠습니다"},
+		{"index":"tutorial07", "narrationText":"지팡이가 닿는 곳은 부분적으로 밝아집니다."},
+		{"index":"tutorial08", "narrationText":"앞에 무엇이 잇는지 몰라 망설여질 때 유용하게 활용해보세요"},
+		{"index":"tutorial09", "narrationText":"소리가 들리는 곳으로 발걸음을 옮겨주시기를 바랍니다. 즐거운 여정이 되시길 바랍니다."},
+		{"index":"tutorial10", "narrationText":"즐거운 여정이 되시길 바랍니다."},
+		{"index":"foreset_01", "narrationText":"여러분은 현재 드넓은 숲 한가운데에 서 있습니다."},
+		{"index":"foreset_02", "narrationText":"이곳에서 나가기 위해서는 폭포를 찾아가야합니다."},
+		{"index":"foreset_03", "narrationText":"폭포를 찾아가는 길에는 예상치 못한 퀴즈들이 기다리고 있습니다."},
+		{"index":"foreset_04", "narrationText":"소리를 듣고 소리의 정체가 무엇인지 맞추면 되는 간단한 퀴즈입니다."},
+		{"index":"foreset_05", "narrationText":"답을 맞추시면 폭포 위치에 대한 힌트를 얻을 수 있습니다."},
+		{"index":"foreset_06", "narrationText":"이제 폭포소리를 따라 발걸음을 옮겨주시기를 바랍니다."},
+		{"index":"foreset_07", "narrationText":"즐거운 여정이 되시길 바랍니다."}
 	]
 }

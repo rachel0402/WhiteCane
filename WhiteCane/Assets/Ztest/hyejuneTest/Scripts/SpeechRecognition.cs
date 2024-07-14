@@ -52,6 +52,8 @@ public class SpeechRecognition : MonoBehaviour
         bytes = EncodeAsWAV(samples, clip.frequency, clip.channels);
         recording = false;
         SendRecording();
+
+
     }
 
     private void SendRecording()
@@ -73,6 +75,11 @@ public class SpeechRecognition : MonoBehaviour
                 recognizeResponse = recognizeResponse.ToLower();
                 SendRocorginzeText();
                 Debug.Log(recognizeResponse + "음성인식");
+
+
+                Debug.Log("퀴즈활성화//맞으면");
+
+                MainSystem.Instance.ObjectManager.quizAcitve = true;
             }
            
          
