@@ -16,13 +16,16 @@ public partial class UINarrationStep : MonoBehaviour
     [SerializeField]
     private List<string> narrationTextList = new List<string>();
 
+   
 
     [SerializeField]
     private UnityEvent activeEvent;
     [SerializeField]
     private UnityEvent deactiveEvent;
 
+
     private bool isSelect = false;
+    private bool isSkipActive = false;
 }
 public partial class UINarrationStep : MonoBehaviour
 {
@@ -34,12 +37,17 @@ public partial class UINarrationStep : MonoBehaviour
     {
         if (isSelect)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape)|| isSkipActive)
             {
+                isSkipActive = false;
                 NextStep();
             }
         }
 
+    }
+    public void SkipButtonActive()
+    {
+        isSkipActive = true;
     }
     public void Initialize()
     {
@@ -62,6 +70,9 @@ public partial class UINarrationStep : MonoBehaviour
         isSelect = true;
         SetNarration();
         MainSystem.Instance.DataManager.NarrationData.UINarrationController.Active();
+
+        MainSystem.Instance.DataManager.NarrationData.UINarrationController.DynamicAllocateUINarrationStep(this);
+
         activeEvent?.Invoke();
     }
     public void Deactive()

@@ -8,6 +8,7 @@ public partial class MainSystem : GenericSingleton<MainSystem> //data field
     public DataManager DataManager { get; private set; } = default;
 
     public ParserManager ParserManager { get; private set; } = default;
+    public ObjectManager ObjectManager { get; private set; } = default;
 
 
 }
@@ -17,18 +18,20 @@ public partial class MainSystem : GenericSingleton<MainSystem> //data field
     {
         DataManager = gameObject.AddComponent<DataManager>();
         ParserManager = gameObject.AddComponent<ParserManager>();
+        ObjectManager = gameObject.AddComponent<ObjectManager>();
     }
     public void Initialize()
     {
         Allocate();
         ParserManager.Initialize();
         DataManager.Initialize();
+        ObjectManager.Initialize();
     }
 
     public void ActiveMainSystem()
     {
         Initialize();
 
-        SceneManager.LoadScene("NatureQuiz");
+        SceneManager.LoadScene("Lobby");
     }
 }

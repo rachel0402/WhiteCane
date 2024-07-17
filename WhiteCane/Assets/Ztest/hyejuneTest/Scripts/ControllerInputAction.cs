@@ -9,10 +9,23 @@ public class ControllerInputAction : MonoBehaviour
     [SerializeField]
     private InputActionReference stick;
     [SerializeField]
-    private InputActionReference button;
+    private InputActionReference a_Button;
+    [SerializeField]
+    private InputActionReference b_Button;
+
+    bool isMove = false;
+    bool isStop = false;
+
+    bool isButtonActive = false;
+
+    float isSelect = 0;
 
 
     private Vector2 inputStickValue;
+
+    [SerializeField]
+    UnityEvent ButtonBEvent;
+
 
     [SerializeField]
     UnityEvent moveEvent;
@@ -23,33 +36,69 @@ public class ControllerInputAction : MonoBehaviour
     public void Update()
     {
         StickMove();
-        Button();
+        // QuizButton();
+        QuizTestButton();
     }
 
-    bool isMove = false;
-    bool isStop = false;
 
-
-    float isSelect =0;
-    public void Button()
+    public void QuizTestButton()
     {
-        //  button.action.
+        isSelect = a_Button.action.ReadValue<float>();
 
-        isSelect = button.action.ReadValue<float>();
-
-        if(isSelect==0)
+        if (isSelect == 0)
         {
 
-            Debug.Log("버튼xxx");
-            Debug.Log(isSelect);
         }
         else
         {
-                Debug.Log("버튼눌림");
-            Debug.Log(isSelect);
+            if (MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition != null)
+            {
+                MainSystem.Instance.ObjectManager.quizObject.QuizCorrect();
+                isButtonActive = false;
+
+                Debug.Log("퀴즈버튼 켜기 ++ 임시임 quizbutton이 원래 맞음 ㅇㅋ?");
+            }
+        }
+    }
+
+
+    public void QuizButton()
+    {
+
+        isSelect = a_Button.action.ReadValue<float>();
+
+        if (isSelect == 0)
+        {
+            if (MainSystem.Instance.ObjectManager.quizAcitve == false && isButtonActive)
+            {
+                if (MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition != null)
+                {
+                    MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition.StopRecording();
+                    isButtonActive = false;
+                    Debug.Log("퀴즈버튼 끄기");
+                }
+
+            }
+        }
+        else
+        {
+            if (MainSystem.Instance.ObjectManager.quizAcitve)
+            {
+                MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition.StartRecording();
+
+                MainSystem.Instance.ObjectManager.quizAcitve = false;
+
+                Debug.Log("퀴즈버튼 켜기");
+                Debug.Log(isSelect);
+
+                isButtonActive = true;
+
+            }
 
         }
     }
+
+
     public void StickMove()
     {
         inputStickValue = stick.action.ReadValue<Vector2>();
@@ -83,11 +132,5 @@ public class ControllerInputAction : MonoBehaviour
             //move
         }
     }
-
-    //public void moveState(bool isState)
-    //{
-    //    isMove = isState;
-    //}
-
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public partial class UINarrationController : MonoBehaviour//data
 {
@@ -12,12 +13,16 @@ public partial class UINarrationController : MonoBehaviour//data
     [SerializeField]
     private AudioSource audioSource;
 
+    UINarrationStep currentUINarrationStep;
+
     //현재 index
     public int narrationIndex = 0;
 
     [SerializeField]
     private TMP_Text narrationText;
 
+    [SerializeField]
+    private InputActionReference skipButton;
 
     [SerializeField]
     private UnityEvent activeEvent;
@@ -32,14 +37,46 @@ public partial class UINarrationController : MonoBehaviour//initialze
         //UINarrationStep 보단 빨리 실행되어야함
         MainSystem.Instance.DataManager.NarrationData.DynamicAllocate_UINarrationController(this);
     }
+    private void Update()
+    {
+        NarrationSkip();
+    }
     public void Initialize()
     {
-
     }
 
 }
 public partial class UINarrationController : MonoBehaviour//fuction
 {
+    private void SkipButton()
+    {
+        currentUINarrationStep.SkipButtonActive();
+        Debug.Log("나레이션 스킵");
+
+    }
+    bool isActive = true;
+    float selectState;
+    public void NarrationSkip()
+    {
+        selectState = skipButton.action.ReadValue<float>();
+
+        if (selectState == 0)
+        {
+            isActive = true;
+        }
+        else
+        {
+            if (isActive)
+            {
+                SkipButton();
+                isActive = false;
+            }
+        }
+    }
+    public void DynamicAllocateUINarrationStep(UINarrationStep uINarrationStepValue)
+    {
+        currentUINarrationStep = uINarrationStepValue;
+    }
     public void SetFrameActiveState(bool state)
     {
         frame.SetActive(state);
