@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Scanner : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject scannerObject;
 
+    [SerializeField]
     private ParticleSystem Particle;
     private bool start = false;
     public float time = 0.0f;
@@ -34,6 +37,8 @@ public class Scanner : MonoBehaviour
                 start = false;
                 Particle.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
                 time = 0.0f; // Reset time for the next use
+
+                scannerObject.SetActive(false);
             }
         }
     }
