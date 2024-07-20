@@ -18,6 +18,8 @@
 		{"index":"foreset_04", "narrationText":"소리를 듣고 소리의 정체가 무엇인지 맞추면 되는 간단한 퀴즈입니다."},
 		{"index":"foreset_05", "narrationText":"답을 맞추시면 폭포 위치에 대한 힌트를 얻을 수 있습니다."},
 		{"index":"foreset_06", "narrationText":"이제 폭포소리를 따라 발걸음을 옮겨주시기를 바랍니다."},
-		{"index":"foreset_07", "narrationText":"즐거운 여정이 되시길 바랍니다."}
+		{"index":"foreset_07", "narrationText":"즐거운 여정이 되시길 바랍니다."},
+		{"index":"foreset_08", "narrationText":"무슨소리일까요?"},
+		{"index":"foreset_09", "narrationText":"다시 생각해보세요"}
 	]
 }

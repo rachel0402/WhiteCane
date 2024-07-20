@@ -12,12 +12,14 @@
 		{"index":"tutorial08", "soundPath":"tutorial08"},
 		{"index":"tutorial09", "soundPath":"tutorial09"},
 		{"index":"tutorial10", "soundPath":"tutorial10"},
-		{"index":"foreset_01", "soundPath":"tutorial01"},
-		{"index":"foreset_02", "soundPath":"tutorial02"},
-		{"index":"foreset_03", "soundPath":"tutorial03"},
-		{"index":"foreset_04", "soundPath":"tutorial04"},
-		{"index":"foreset_05", "soundPath":"tutorial05"},
-		{"index":"foreset_06", "soundPath":"tutorial06"},
-		{"index":"foreset_07", "soundPath":"tutorial07"}
+		{"index":"foreset_01", "soundPath":"foreset_01"},
+		{"index":"foreset_02", "soundPath":"foreset_02"},
+		{"index":"foreset_03", "soundPath":"foreset_03"},
+		{"index":"foreset_04", "soundPath":"foreset_04"},
+		{"index":"foreset_05", "soundPath":"foreset_05"},
+		{"index":"foreset_06", "soundPath":"foreset_06"},
+		{"index":"foreset_07", "soundPath":"foreset_07"},
+		{"index":"foreset_08", "soundPath":"foreset_08"},
+		{"index":"foreset_09", "soundPath":"foreset_09"}
 	]
 }
