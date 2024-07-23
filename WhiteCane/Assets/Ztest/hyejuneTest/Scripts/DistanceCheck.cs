@@ -19,7 +19,11 @@ public class DistanceCheck : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        if (currentCollierObject != null)
+        {
             currentCollierObject.DistanceExit();
+            currentCollierObject = null;
+        }
 
     }
 }

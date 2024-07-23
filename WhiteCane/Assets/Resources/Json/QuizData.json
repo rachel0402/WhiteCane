@@ -1,13 +1,12 @@
 {
 	"array":[
 		{"quizName":"bird", "problem":"어떤 소리인지 맞춰보세요1", "correctAnswer":"bird", "soundPath":"QuizSound/test01"},
-		{"quizName":"falls", "problem":"어떤 소리인지 맞춰보세요2", "correctAnswer":"falls", "soundPath":"QuizSound/test02"},
 		{"quizName":"swing", "problem":"어떤 소리인지 맞춰보세요3", "correctAnswer":"swing", "soundPath":"QuizSound/test01"},
 		{"quizName":"squirrel", "problem":"어떤 소리인지 맞춰보세요4", "correctAnswer":"squirrel", "soundPath":"QuizSound/test02"},
 		{"quizName":"pond", "problem":"어떤 소리인지 맞춰보세요5", "correctAnswer":"pond", "soundPath":"QuizSound/test01"},
 		{"quizName":"camp", "problem":"어떤 소리인지 맞춰보세요6", "correctAnswer":"camp", "soundPath":"QuizSound/test02"},
 		{"quizName":"deer", "problem":"어떤 소리인지 맞춰보세요7", "correctAnswer":"deer", "soundPath":"QuizSound/test01"},
-		{"quizName":"mushroom", "problem":"어떤 소리인지 맞춰보세요8", "correctAnswer":"mushroom", "soundPath":"QuizSound/test02"},
+		{"quizName":"bush", "problem":"어떤 소리인지 맞춰보세요8", "correctAnswer":"bush", "soundPath":"QuizSound/test02"},
 		{"quizName":"owl", "problem":"어떤 소리인지 맞춰보세요9", "correctAnswer":"owl", "soundPath":"QuizSound/test01"}
 	]
 }

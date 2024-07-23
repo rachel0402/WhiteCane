@@ -24,6 +24,9 @@ public partial class QuizObject : MonoBehaviour
     private QuizData.QuizDataInformation currenQuizObjectInformation;
 
     [SerializeField]
+    Collider Objectcollider;
+
+    [SerializeField]
     private UnityEvent activeEvent;
     [SerializeField]
     private UnityEvent deactiveEvent;
@@ -46,6 +49,7 @@ public partial class QuizObject : MonoBehaviour
     }
     public void Deactive()
     {
+        Objectcollider.enabled=false;
         deactiveEvent?.Invoke();
     }
 
@@ -79,6 +83,8 @@ public partial class QuizObject : MonoBehaviour
 
         recordFrame.SetActive(false);
         ObjectVFX.SetActive(true);
+
+        Deactive();
     }
     public void QuizINCorrect()
     {
