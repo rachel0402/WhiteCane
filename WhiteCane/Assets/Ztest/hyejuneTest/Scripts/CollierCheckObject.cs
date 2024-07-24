@@ -8,12 +8,8 @@ public partial class CollierCheckObject : MonoBehaviour
     [SerializeField]
     private GameObject particle;
 
-
-    //[SerializeField]
-    //MeshRenderer meshRenderer;
-
-    //[SerializeField]
-    //int ountlineIndex= 1;
+    [SerializeField]
+    private AudioSource sound;
 
     [SerializeField]
     private UnityEvent activeEvent;
@@ -35,10 +31,12 @@ public partial class CollierCheckObject : MonoBehaviour
     {
         //Distance Check
         particle.SetActive(true);
+        sound.Play();
     }
     public void DistanceExit()
     {
         particle.SetActive(false);
+        sound.Pause();
     }
 
     //public Material GetMaterialShader()
