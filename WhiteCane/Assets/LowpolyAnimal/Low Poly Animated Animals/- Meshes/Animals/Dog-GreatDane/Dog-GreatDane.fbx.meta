@@ -1,142 +1,389 @@
 fileFormatVersion: 2
 guid: c2f0696e55a07411e8829626657ee982
-timeCreated: 1542230638
-licenseType: Store
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: backAnkle_L
-    100002: backAnkle_R
-    100004: backHip_L
-    100006: backHip_R
-    100008: backKnee_L
-    100010: backKnee_R
-    100012: backToes1_L
-    100014: backToes1_R
-    100016: backToes2_L
-    100018: backToes2_R
-    100020: backToes3_L
-    100022: backToes3_R
-    100024: backToes4_L
-    100026: backToes4_R
-    100028: DeformationSystem
-    100030: Dog-GreatDane
-    100032: //RootNode
-    100034: frontAnkle_L
-    100036: frontAnkle_R
-    100038: frontHip_L
-    100040: frontHip_R
-    100042: frontKnee_L
-    100044: frontKnee_R
-    100046: frontRump_L
-    100048: frontRump_R
-    100050: frontToes1_L
-    100052: frontToes1_R
-    100054: frontToes2_L
-    100056: frontToes2_R
-    100058: frontToes3_L
-    100060: frontToes3_R
-    100062: frontToes4_L
-    100064: frontToes4_R
-    100066: Geometry
-    100068: Head_M
-    100070: Jaw_M
-    100072: JawEnd_M
-    100074: joint1_L
-    100076: joint1_R
-    100078: joint2_L
-    100080: joint2_R
-    100082: joint3_L
-    100084: joint3_R
-    100086: joint4_M
-    100088: Main
-    100090: Neck1_M
-    100092: Neck3_M
-    100094: Neck4_M
-    100096: Neck_M
-    100098: Root_M
-    100100: Spine11_M
-    100102: Spine1_M
-    100104: Tail0_M
-    100106: Tail2_M
-    100108: Tail3_M
-    100110: Tail4_M
-    100112: Tail5_M
-    100114: Tail6_M
-    100116: tempRename1_M
-    100118: tempRename_M
-    400000: backAnkle_L
-    400002: backAnkle_R
-    400004: backHip_L
-    400006: backHip_R
-    400008: backKnee_L
-    400010: backKnee_R
-    400012: backToes1_L
-    400014: backToes1_R
-    400016: backToes2_L
-    400018: backToes2_R
-    400020: backToes3_L
-    400022: backToes3_R
-    400024: backToes4_L
-    400026: backToes4_R
-    400028: DeformationSystem
-    400030: Dog-GreatDane
-    400032: //RootNode
-    400034: frontAnkle_L
-    400036: frontAnkle_R
-    400038: frontHip_L
-    400040: frontHip_R
-    400042: frontKnee_L
-    400044: frontKnee_R
-    400046: frontRump_L
-    400048: frontRump_R
-    400050: frontToes1_L
-    400052: frontToes1_R
-    400054: frontToes2_L
-    400056: frontToes2_R
-    400058: frontToes3_L
-    400060: frontToes3_R
-    400062: frontToes4_L
-    400064: frontToes4_R
-    400066: Geometry
-    400068: Head_M
-    400070: Jaw_M
-    400072: JawEnd_M
-    400074: joint1_L
-    400076: joint1_R
-    400078: joint2_L
-    400080: joint2_R
-    400082: joint3_L
-    400084: joint3_R
-    400086: joint4_M
-    400088: Main
-    400090: Neck1_M
-    400092: Neck3_M
-    400094: Neck4_M
-    400096: Neck_M
-    400098: Root_M
-    400100: Spine11_M
-    400102: Spine1_M
-    400104: Tail0_M
-    400106: Tail2_M
-    400108: Tail3_M
-    400110: Tail4_M
-    400112: Tail5_M
-    400114: Tail6_M
-    400116: tempRename1_M
-    400118: tempRename_M
-    4300000: Dog-GreatDane
-    9500000: //RootNode
-    13700000: Dog-GreatDane
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: backAnkle_L
+  - first:
+      1: 100002
+    second: backAnkle_R
+  - first:
+      1: 100004
+    second: backHip_L
+  - first:
+      1: 100006
+    second: backHip_R
+  - first:
+      1: 100008
+    second: backKnee_L
+  - first:
+      1: 100010
+    second: backKnee_R
+  - first:
+      1: 100012
+    second: backToes1_L
+  - first:
+      1: 100014
+    second: backToes1_R
+  - first:
+      1: 100016
+    second: backToes2_L
+  - first:
+      1: 100018
+    second: backToes2_R
+  - first:
+      1: 100020
+    second: backToes3_L
+  - first:
+      1: 100022
+    second: backToes3_R
+  - first:
+      1: 100024
+    second: backToes4_L
+  - first:
+      1: 100026
+    second: backToes4_R
+  - first:
+      1: 100028
+    second: DeformationSystem
+  - first:
+      1: 100030
+    second: Dog-GreatDane
+  - first:
+      1: 100032
+    second: //RootNode
+  - first:
+      1: 100034
+    second: frontAnkle_L
+  - first:
+      1: 100036
+    second: frontAnkle_R
+  - first:
+      1: 100038
+    second: frontHip_L
+  - first:
+      1: 100040
+    second: frontHip_R
+  - first:
+      1: 100042
+    second: frontKnee_L
+  - first:
+      1: 100044
+    second: frontKnee_R
+  - first:
+      1: 100046
+    second: frontRump_L
+  - first:
+      1: 100048
+    second: frontRump_R
+  - first:
+      1: 100050
+    second: frontToes1_L
+  - first:
+      1: 100052
+    second: frontToes1_R
+  - first:
+      1: 100054
+    second: frontToes2_L
+  - first:
+      1: 100056
+    second: frontToes2_R
+  - first:
+      1: 100058
+    second: frontToes3_L
+  - first:
+      1: 100060
+    second: frontToes3_R
+  - first:
+      1: 100062
+    second: frontToes4_L
+  - first:
+      1: 100064
+    second: frontToes4_R
+  - first:
+      1: 100066
+    second: Geometry
+  - first:
+      1: 100068
+    second: Head_M
+  - first:
+      1: 100070
+    second: Jaw_M
+  - first:
+      1: 100072
+    second: JawEnd_M
+  - first:
+      1: 100074
+    second: joint1_L
+  - first:
+      1: 100076
+    second: joint1_R
+  - first:
+      1: 100078
+    second: joint2_L
+  - first:
+      1: 100080
+    second: joint2_R
+  - first:
+      1: 100082
+    second: joint3_L
+  - first:
+      1: 100084
+    second: joint3_R
+  - first:
+      1: 100086
+    second: joint4_M
+  - first:
+      1: 100088
+    second: Main
+  - first:
+      1: 100090
+    second: Neck1_M
+  - first:
+      1: 100092
+    second: Neck3_M
+  - first:
+      1: 100094
+    second: Neck4_M
+  - first:
+      1: 100096
+    second: Neck_M
+  - first:
+      1: 100098
+    second: Root_M
+  - first:
+      1: 100100
+    second: Spine11_M
+  - first:
+      1: 100102
+    second: Spine1_M
+  - first:
+      1: 100104
+    second: Tail0_M
+  - first:
+      1: 100106
+    second: Tail2_M
+  - first:
+      1: 100108
+    second: Tail3_M
+  - first:
+      1: 100110
+    second: Tail4_M
+  - first:
+      1: 100112
+    second: Tail5_M
+  - first:
+      1: 100114
+    second: Tail6_M
+  - first:
+      1: 100116
+    second: tempRename1_M
+  - first:
+      1: 100118
+    second: tempRename_M
+  - first:
+      4: 400000
+    second: backAnkle_L
+  - first:
+      4: 400002
+    second: backAnkle_R
+  - first:
+      4: 400004
+    second: backHip_L
+  - first:
+      4: 400006
+    second: backHip_R
+  - first:
+      4: 400008
+    second: backKnee_L
+  - first:
+      4: 400010
+    second: backKnee_R
+  - first:
+      4: 400012
+    second: backToes1_L
+  - first:
+      4: 400014
+    second: backToes1_R
+  - first:
+      4: 400016
+    second: backToes2_L
+  - first:
+      4: 400018
+    second: backToes2_R
+  - first:
+      4: 400020
+    second: backToes3_L
+  - first:
+      4: 400022
+    second: backToes3_R
+  - first:
+      4: 400024
+    second: backToes4_L
+  - first:
+      4: 400026
+    second: backToes4_R
+  - first:
+      4: 400028
+    second: DeformationSystem
+  - first:
+      4: 400030
+    second: Dog-GreatDane
+  - first:
+      4: 400032
+    second: //RootNode
+  - first:
+      4: 400034
+    second: frontAnkle_L
+  - first:
+      4: 400036
+    second: frontAnkle_R
+  - first:
+      4: 400038
+    second: frontHip_L
+  - first:
+      4: 400040
+    second: frontHip_R
+  - first:
+      4: 400042
+    second: frontKnee_L
+  - first:
+      4: 400044
+    second: frontKnee_R
+  - first:
+      4: 400046
+    second: frontRump_L
+  - first:
+      4: 400048
+    second: frontRump_R
+  - first:
+      4: 400050
+    second: frontToes1_L
+  - first:
+      4: 400052
+    second: frontToes1_R
+  - first:
+      4: 400054
+    second: frontToes2_L
+  - first:
+      4: 400056
+    second: frontToes2_R
+  - first:
+      4: 400058
+    second: frontToes3_L
+  - first:
+      4: 400060
+    second: frontToes3_R
+  - first:
+      4: 400062
+    second: frontToes4_L
+  - first:
+      4: 400064
+    second: frontToes4_R
+  - first:
+      4: 400066
+    second: Geometry
+  - first:
+      4: 400068
+    second: Head_M
+  - first:
+      4: 400070
+    second: Jaw_M
+  - first:
+      4: 400072
+    second: JawEnd_M
+  - first:
+      4: 400074
+    second: joint1_L
+  - first:
+      4: 400076
+    second: joint1_R
+  - first:
+      4: 400078
+    second: joint2_L
+  - first:
+      4: 400080
+    second: joint2_R
+  - first:
+      4: 400082
+    second: joint3_L
+  - first:
+      4: 400084
+    second: joint3_R
+  - first:
+      4: 400086
+    second: joint4_M
+  - first:
+      4: 400088
+    second: Main
+  - first:
+      4: 400090
+    second: Neck1_M
+  - first:
+      4: 400092
+    second: Neck3_M
+  - first:
+      4: 400094
+    second: Neck4_M
+  - first:
+      4: 400096
+    second: Neck_M
+  - first:
+      4: 400098
+    second: Root_M
+  - first:
+      4: 400100
+    second: Spine11_M
+  - first:
+      4: 400102
+    second: Spine1_M
+  - first:
+      4: 400104
+    second: Tail0_M
+  - first:
+      4: 400106
+    second: Tail2_M
+  - first:
+      4: 400108
+    second: Tail3_M
+  - first:
+      4: 400110
+    second: Tail4_M
+  - first:
+      4: 400112
+    second: Tail5_M
+  - first:
+      4: 400114
+    second: Tail6_M
+  - first:
+      4: 400116
+    second: tempRename1_M
+  - first:
+      4: 400118
+    second: tempRename_M
+  - first:
+      43: 4300000
+    second: Dog-GreatDane
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Dog-GreatDane
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -144,6 +391,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -158,30 +407,47 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 111
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -191,14 +457,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
