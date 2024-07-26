@@ -48,7 +48,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _EffectEnabled: 0
-    - _Outline_Thickness_N: 0.01
+    - _Outline_Thickness_N: 0.02
     - _Outline_Thickness_Y: 0.1
     - _QueueControl: 0
     - _QueueOffset: 0
