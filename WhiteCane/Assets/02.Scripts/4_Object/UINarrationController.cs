@@ -56,6 +56,7 @@ public partial class UINarrationController : MonoBehaviour//fuction
     }
     bool isActive = true;
     float selectState;
+
     public void NarrationSkip()
     {
         selectState = skipButton.action.ReadValue<float>();
@@ -107,7 +108,17 @@ public partial class UINarrationController : MonoBehaviour//fuction
         audioSource.clip = MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName);
         audioSource.Play();
         //audioSource.PlayOneShot(MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName));
+        StartCoroutine(waitAudio());
+
 
     }
 
+
+
+    private IEnumerator waitAudio()
+    {
+        yield return new WaitForSeconds(audioSource.clip.length);
+        SkipButton();
+        print("사운드 끝");
+    }
 }

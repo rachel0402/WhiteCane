@@ -88,10 +88,7 @@ public partial class UINarrationStep : MonoBehaviour
 
     }
 
-    //private void Reset()
-    //{
-    //    narrationStepIndex = 0;
-    //}
+   
     public void NextStep()
     {
         //NARRATION INDEX를 맨 상위에서 불러야할듯
@@ -113,8 +110,4 @@ public partial class UINarrationStep : MonoBehaviour
 
     }
 
-    //public string GetIndex()
-    //{
-    //    return "a";
-    //}
 }
