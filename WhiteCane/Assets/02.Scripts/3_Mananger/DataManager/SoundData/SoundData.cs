@@ -18,7 +18,7 @@ public partial class SoundData
 {
     private Dictionary<string, SoundDataInformation> SoundDataInformationDictonary = default;
    
-    const string soundFilePath = "Sound";
+    const string soundFilePath = "NarrationSound";
 
 }
 public partial class SoundData
