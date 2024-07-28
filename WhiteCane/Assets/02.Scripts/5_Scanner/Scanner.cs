@@ -39,6 +39,15 @@ public class Scanner : MonoBehaviour
                 time = 0.0f; // Reset time for the next use
 
                 scannerObject.SetActive(false);
+
+                Debug.Log("ÆÄÆ¼Å¬ END CHECK");
+
+                if (MainSystem.Instance.ObjectManager.tutorialCane != null)
+                {
+                    MainSystem.Instance.ObjectManager.tutorialCane.ParticleEndCheck();
+                }
+              
+
             }
         }
     }
