@@ -1,88 +1,227 @@
 fileFormatVersion: 2
 guid: bc2502da33fa4fe4aab1a3153e16d36d
-timeCreated: 1504634721
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: joint10
-    100002: joint11
-    100004: joint12
-    100006: joint13
-    100008: joint14
-    100010: joint15
-    100012: joint16
-    100014: joint17
-    100016: joint18
-    100018: joint19
-    100020: joint2
-    100022: joint20
-    100024: joint21
-    100026: joint22
-    100028: joint23
-    100030: joint24
-    100032: joint25
-    100034: joint26
-    100036: joint27
-    100038: joint28
-    100040: joint29
-    100042: joint2_2
-    100044: joint3
-    100046: joint30
-    100048: joint31
-    100050: joint4
-    100052: joint5
-    100054: joint6
-    100056: joint7
-    100058: joint8
-    100060: joint9
-    100062: Null:snake
-    100064: //RootNode
-    400000: joint10
-    400002: joint11
-    400004: joint12
-    400006: joint13
-    400008: joint14
-    400010: joint15
-    400012: joint16
-    400014: joint17
-    400016: joint18
-    400018: joint19
-    400020: joint2
-    400022: joint20
-    400024: joint21
-    400026: joint22
-    400028: joint23
-    400030: joint24
-    400032: joint25
-    400034: joint26
-    400036: joint27
-    400038: joint28
-    400040: joint29
-    400042: joint2_2
-    400044: joint3
-    400046: joint30
-    400048: joint31
-    400050: joint4
-    400052: joint5
-    400054: joint6
-    400056: joint7
-    400058: joint8
-    400060: joint9
-    400062: Null:snake
-    400064: //RootNode
-    4300000: Null:snake
-    9500000: //RootNode
-    13700000: Null:snake
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: joint10
+  - first:
+      1: 100002
+    second: joint11
+  - first:
+      1: 100004
+    second: joint12
+  - first:
+      1: 100006
+    second: joint13
+  - first:
+      1: 100008
+    second: joint14
+  - first:
+      1: 100010
+    second: joint15
+  - first:
+      1: 100012
+    second: joint16
+  - first:
+      1: 100014
+    second: joint17
+  - first:
+      1: 100016
+    second: joint18
+  - first:
+      1: 100018
+    second: joint19
+  - first:
+      1: 100020
+    second: joint2
+  - first:
+      1: 100022
+    second: joint20
+  - first:
+      1: 100024
+    second: joint21
+  - first:
+      1: 100026
+    second: joint22
+  - first:
+      1: 100028
+    second: joint23
+  - first:
+      1: 100030
+    second: joint24
+  - first:
+      1: 100032
+    second: joint25
+  - first:
+      1: 100034
+    second: joint26
+  - first:
+      1: 100036
+    second: joint27
+  - first:
+      1: 100038
+    second: joint28
+  - first:
+      1: 100040
+    second: joint29
+  - first:
+      1: 100042
+    second: joint2_2
+  - first:
+      1: 100044
+    second: joint3
+  - first:
+      1: 100046
+    second: joint30
+  - first:
+      1: 100048
+    second: joint31
+  - first:
+      1: 100050
+    second: joint4
+  - first:
+      1: 100052
+    second: joint5
+  - first:
+      1: 100054
+    second: joint6
+  - first:
+      1: 100056
+    second: joint7
+  - first:
+      1: 100058
+    second: joint8
+  - first:
+      1: 100060
+    second: joint9
+  - first:
+      1: 100062
+    second: Null:snake
+  - first:
+      1: 100064
+    second: //RootNode
+  - first:
+      4: 400000
+    second: joint10
+  - first:
+      4: 400002
+    second: joint11
+  - first:
+      4: 400004
+    second: joint12
+  - first:
+      4: 400006
+    second: joint13
+  - first:
+      4: 400008
+    second: joint14
+  - first:
+      4: 400010
+    second: joint15
+  - first:
+      4: 400012
+    second: joint16
+  - first:
+      4: 400014
+    second: joint17
+  - first:
+      4: 400016
+    second: joint18
+  - first:
+      4: 400018
+    second: joint19
+  - first:
+      4: 400020
+    second: joint2
+  - first:
+      4: 400022
+    second: joint20
+  - first:
+      4: 400024
+    second: joint21
+  - first:
+      4: 400026
+    second: joint22
+  - first:
+      4: 400028
+    second: joint23
+  - first:
+      4: 400030
+    second: joint24
+  - first:
+      4: 400032
+    second: joint25
+  - first:
+      4: 400034
+    second: joint26
+  - first:
+      4: 400036
+    second: joint27
+  - first:
+      4: 400038
+    second: joint28
+  - first:
+      4: 400040
+    second: joint29
+  - first:
+      4: 400042
+    second: joint2_2
+  - first:
+      4: 400044
+    second: joint3
+  - first:
+      4: 400046
+    second: joint30
+  - first:
+      4: 400048
+    second: joint31
+  - first:
+      4: 400050
+    second: joint4
+  - first:
+      4: 400052
+    second: joint5
+  - first:
+      4: 400054
+    second: joint6
+  - first:
+      4: 400056
+    second: joint7
+  - first:
+      4: 400058
+    second: joint8
+  - first:
+      4: 400060
+    second: joint9
+  - first:
+      4: 400062
+    second: Null:snake
+  - first:
+      4: 400064
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: Null:snake
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Null:snake
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -90,12 +229,15 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -103,26 +245,47 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 90
+    normalImportMode: 1
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -132,14 +295,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

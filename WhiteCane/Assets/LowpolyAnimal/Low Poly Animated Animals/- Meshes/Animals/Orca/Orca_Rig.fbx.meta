@@ -1,90 +1,233 @@
 fileFormatVersion: 2
 guid: 6104af2b6e9a170448477fd7c02b8b0e
-timeCreated: 1518287747
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: BackA_M
-    100002: BackB_M
-    100004: BackC_M
-    100006: BackD_M
-    100008: BackE_M
-    100010: BackF_M
-    100012: BodyFinSide1_L
-    100014: BodyFinSide1_R
-    100016: BodyFinSide2_L
-    100018: BodyFinSide2_R
-    100020: BodyFinSide3_L
-    100022: BodyFinSide3_R
-    100024: BodyFinSide4_L
-    100026: BodyFinSide4_R
-    100028: DeformationSystem
-    100030: Group
-    100032: Head_M
-    100034: HeadEnd_M
-    100036: Jaw_M
-    100038: JawEnd_M
-    100040: joint1_L
-    100042: joint1_R
-    100044: joint2_L
-    100046: joint2_R
-    100048: joint3_L
-    100050: joint3_R
-    100052: joint4_M
-    100054: joint5_M
-    100056: joint6_M
-    100058: joint7_M
-    100060: Main
-    100062: orca
-    100064: //RootNode
-    100066: Root_M
-    400000: BackA_M
-    400002: BackB_M
-    400004: BackC_M
-    400006: BackD_M
-    400008: BackE_M
-    400010: BackF_M
-    400012: BodyFinSide1_L
-    400014: BodyFinSide1_R
-    400016: BodyFinSide2_L
-    400018: BodyFinSide2_R
-    400020: BodyFinSide3_L
-    400022: BodyFinSide3_R
-    400024: BodyFinSide4_L
-    400026: BodyFinSide4_R
-    400028: DeformationSystem
-    400030: Group
-    400032: Head_M
-    400034: HeadEnd_M
-    400036: Jaw_M
-    400038: JawEnd_M
-    400040: joint1_L
-    400042: joint1_R
-    400044: joint2_L
-    400046: joint2_R
-    400048: joint3_L
-    400050: joint3_R
-    400052: joint4_M
-    400054: joint5_M
-    400056: joint6_M
-    400058: joint7_M
-    400060: Main
-    400062: orca
-    400064: //RootNode
-    400066: Root_M
-    4300000: orca
-    9500000: //RootNode
-    13700000: orca
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: BackA_M
+  - first:
+      1: 100002
+    second: BackB_M
+  - first:
+      1: 100004
+    second: BackC_M
+  - first:
+      1: 100006
+    second: BackD_M
+  - first:
+      1: 100008
+    second: BackE_M
+  - first:
+      1: 100010
+    second: BackF_M
+  - first:
+      1: 100012
+    second: BodyFinSide1_L
+  - first:
+      1: 100014
+    second: BodyFinSide1_R
+  - first:
+      1: 100016
+    second: BodyFinSide2_L
+  - first:
+      1: 100018
+    second: BodyFinSide2_R
+  - first:
+      1: 100020
+    second: BodyFinSide3_L
+  - first:
+      1: 100022
+    second: BodyFinSide3_R
+  - first:
+      1: 100024
+    second: BodyFinSide4_L
+  - first:
+      1: 100026
+    second: BodyFinSide4_R
+  - first:
+      1: 100028
+    second: DeformationSystem
+  - first:
+      1: 100030
+    second: Group
+  - first:
+      1: 100032
+    second: Head_M
+  - first:
+      1: 100034
+    second: HeadEnd_M
+  - first:
+      1: 100036
+    second: Jaw_M
+  - first:
+      1: 100038
+    second: JawEnd_M
+  - first:
+      1: 100040
+    second: joint1_L
+  - first:
+      1: 100042
+    second: joint1_R
+  - first:
+      1: 100044
+    second: joint2_L
+  - first:
+      1: 100046
+    second: joint2_R
+  - first:
+      1: 100048
+    second: joint3_L
+  - first:
+      1: 100050
+    second: joint3_R
+  - first:
+      1: 100052
+    second: joint4_M
+  - first:
+      1: 100054
+    second: joint5_M
+  - first:
+      1: 100056
+    second: joint6_M
+  - first:
+      1: 100058
+    second: joint7_M
+  - first:
+      1: 100060
+    second: Main
+  - first:
+      1: 100062
+    second: orca
+  - first:
+      1: 100064
+    second: //RootNode
+  - first:
+      1: 100066
+    second: Root_M
+  - first:
+      4: 400000
+    second: BackA_M
+  - first:
+      4: 400002
+    second: BackB_M
+  - first:
+      4: 400004
+    second: BackC_M
+  - first:
+      4: 400006
+    second: BackD_M
+  - first:
+      4: 400008
+    second: BackE_M
+  - first:
+      4: 400010
+    second: BackF_M
+  - first:
+      4: 400012
+    second: BodyFinSide1_L
+  - first:
+      4: 400014
+    second: BodyFinSide1_R
+  - first:
+      4: 400016
+    second: BodyFinSide2_L
+  - first:
+      4: 400018
+    second: BodyFinSide2_R
+  - first:
+      4: 400020
+    second: BodyFinSide3_L
+  - first:
+      4: 400022
+    second: BodyFinSide3_R
+  - first:
+      4: 400024
+    second: BodyFinSide4_L
+  - first:
+      4: 400026
+    second: BodyFinSide4_R
+  - first:
+      4: 400028
+    second: DeformationSystem
+  - first:
+      4: 400030
+    second: Group
+  - first:
+      4: 400032
+    second: Head_M
+  - first:
+      4: 400034
+    second: HeadEnd_M
+  - first:
+      4: 400036
+    second: Jaw_M
+  - first:
+      4: 400038
+    second: JawEnd_M
+  - first:
+      4: 400040
+    second: joint1_L
+  - first:
+      4: 400042
+    second: joint1_R
+  - first:
+      4: 400044
+    second: joint2_L
+  - first:
+      4: 400046
+    second: joint2_R
+  - first:
+      4: 400048
+    second: joint3_L
+  - first:
+      4: 400050
+    second: joint3_R
+  - first:
+      4: 400052
+    second: joint4_M
+  - first:
+      4: 400054
+    second: joint5_M
+  - first:
+      4: 400056
+    second: joint6_M
+  - first:
+      4: 400058
+    second: joint7_M
+  - first:
+      4: 400060
+    second: Main
+  - first:
+      4: 400062
+    second: orca
+  - first:
+      4: 400064
+    second: //RootNode
+  - first:
+      4: 400066
+    second: Root_M
+  - first:
+      43: 4300000
+    second: orca
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: orca
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -92,12 +235,15 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -105,26 +251,47 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 90
+    normalImportMode: 1
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -134,14 +301,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
