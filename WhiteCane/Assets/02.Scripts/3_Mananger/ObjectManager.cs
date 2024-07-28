@@ -4,6 +4,7 @@ using UnityEngine;
 
 public partial class ObjectManager : MonoBehaviour
 {
+    public TutorialCane tutorialCane;
    public QuizObject quizObject;
     public bool quizAcitve = false;
 }
@@ -23,5 +24,11 @@ public partial class ObjectManager : MonoBehaviour
     {
         quizObject = quizObjectValue;
         quizAcitve = true;
+    }
+
+    public void SetobjectHit(TutorialCane TutorialCaneValue)
+    {
+        tutorialCane = TutorialCaneValue;
+
     }
 }
