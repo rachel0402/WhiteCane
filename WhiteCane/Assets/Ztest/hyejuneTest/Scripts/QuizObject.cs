@@ -10,6 +10,8 @@ public partial class QuizObject : MonoBehaviour
     [SerializeField]
     private GameObject ObjectVFX;
     [SerializeField]
+    private GameObject positionParticle;
+    [SerializeField]
     private GameObject recordFrame;
 
     [HideInInspector]
@@ -50,6 +52,7 @@ public partial class QuizObject : MonoBehaviour
     public void Deactive()
     {
         Objectcollider.enabled=false;
+        positionParticle.SetActive(false);
         deactiveEvent?.Invoke();
     }
 

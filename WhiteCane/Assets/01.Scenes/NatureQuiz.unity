@@ -2309,6 +2309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectVFX: {fileID: 1734304205}
+  positionParticle: {fileID: 0}
   recordFrame: {fileID: 781630661913371752}
   currentSpeechRecognition: {fileID: 0}
   quizName: bird
@@ -4138,8 +4139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717505aeff856cd4db731a6d040498d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  narrationIndexList:
-  - foreset_09
+  narrationIndexList: []
   narrationTextList: []
   activeEvent:
     m_PersistentCalls:
@@ -4512,6 +4512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectVFX: {fileID: 574892055}
+  positionParticle: {fileID: 0}
   recordFrame: {fileID: 1424339918}
   currentSpeechRecognition: {fileID: 0}
   quizName: owl
@@ -4833,13 +4834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrationIndexList:
-  - foreset_01
-  - foreset_02
-  - foreset_03
-  - foreset_04
-  - foreset_05
-  - foreset_06
-  - foreset_07
+  - Lysoniastep01
   narrationTextList: []
   activeEvent:
     m_PersistentCalls:
@@ -6498,6 +6493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectVFX: {fileID: 1363969643}
+  positionParticle: {fileID: 0}
   recordFrame: {fileID: 547410146}
   currentSpeechRecognition: {fileID: 0}
   quizName: swing
@@ -10947,6 +10943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectVFX: {fileID: 1380649125}
+  positionParticle: {fileID: 0}
   recordFrame: {fileID: 1699921429}
   currentSpeechRecognition: {fileID: 0}
   quizName: squirrel
@@ -11386,6 +11383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectVFX: {fileID: 1336168242}
+  positionParticle: {fileID: 0}
   recordFrame: {fileID: 1252770617}
   currentSpeechRecognition: {fileID: 0}
   quizName: deer
@@ -13052,6 +13050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectVFX: {fileID: 221129994}
+  positionParticle: {fileID: 0}
   recordFrame: {fileID: 1812025606}
   currentSpeechRecognition: {fileID: 0}
   quizName: bush
@@ -16179,8 +16178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717505aeff856cd4db731a6d040498d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  narrationIndexList:
-  - foreset_08
+  narrationIndexList: []
   narrationTextList: []
   activeEvent:
     m_PersistentCalls:
@@ -16421,6 +16419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectVFX: {fileID: 2131242518}
+  positionParticle: {fileID: 0}
   recordFrame: {fileID: 653840289}
   currentSpeechRecognition: {fileID: 0}
   quizName: pond
@@ -17368,6 +17367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectVFX: {fileID: 1254266619}
+  positionParticle: {fileID: 0}
   recordFrame: {fileID: 117497287}
   currentSpeechRecognition: {fileID: 0}
   quizName: camp
