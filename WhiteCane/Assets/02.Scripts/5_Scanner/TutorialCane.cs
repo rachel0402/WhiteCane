@@ -45,7 +45,11 @@ public class TutorialCane : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (isFirst)
+
+        DistanceCheck distanceCheck= collision.gameObject.GetComponent<DistanceCheck>();
+
+
+        if (isFirst&& distanceCheck ==null)
         {
             scanner.Set_Origin(this.transform.position);
             scannerPrefab.SetActive(true);

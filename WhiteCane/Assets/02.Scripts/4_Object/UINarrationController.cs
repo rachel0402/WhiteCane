@@ -85,7 +85,7 @@ public partial class UINarrationController : MonoBehaviour//fuction
 
     public void Active()
     {
-        SetFrameActiveState(true);
+      //  SetFrameActiveState(true);
         activeEvent?.Invoke();
     }
     public void Deactive()
