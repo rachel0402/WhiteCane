@@ -12,8 +12,10 @@ public partial class UINarrationController : MonoBehaviour//data
 
     [SerializeField]
     private AudioSource audioSource;
+    private bool isActive = true;
+    private float selectState;
 
-    UINarrationStep currentUINarrationStep;
+    private UINarrationStep currentUINarrationStep;
 
     //현재 index
     public int narrationIndex = 0;
@@ -54,8 +56,6 @@ public partial class UINarrationController : MonoBehaviour//fuction
         Debug.Log("나레이션 스킵");
 
     }
-    bool isActive = true;
-    float selectState;
 
     public void NarrationSkip()
     {
@@ -85,7 +85,7 @@ public partial class UINarrationController : MonoBehaviour//fuction
 
     public void Active()
     {
-      //  SetFrameActiveState(true);
+      //  SetFrameActiveState(true); 하면 ㄴㄴ
         activeEvent?.Invoke();
     }
     public void Deactive()
@@ -98,8 +98,6 @@ public partial class UINarrationController : MonoBehaviour//fuction
     {
         narrationText.text = narrationTextValue;
 
-        //text만 나올껀지에 관한 controller도 만들면 좋을듯
-        //이건 text +sound
     }
     public void SetNarrationSound(string narrationName)
     {
@@ -107,9 +105,7 @@ public partial class UINarrationController : MonoBehaviour//fuction
 
         audioSource.clip = MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName);
         audioSource.Play();
-        //audioSource.PlayOneShot(MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName));
         StartCoroutine(waitAudio());
-
 
     }
 

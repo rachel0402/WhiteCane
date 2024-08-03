@@ -7,6 +7,7 @@ public class RespawnPosition : MonoBehaviour
     [SerializeField]
     private Transform currentRespawnTransform;
 
+   
     [SerializeField]
     private Transform myTransform;
 
@@ -21,6 +22,10 @@ public class RespawnPosition : MonoBehaviour
     {
         myTransform.position = currentRespawnTransform.position;
     }
+
+
+
+
 
     public void OnCollisionEnter(Collision collision)
     {

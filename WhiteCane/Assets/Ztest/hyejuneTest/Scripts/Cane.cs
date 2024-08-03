@@ -12,7 +12,7 @@ public partial class Cane : MonoBehaviour
     [SerializeField]
     private UnityEvent triggerExitEvent;
 
-
+    private bool isSelecting = false;
 }
 public partial class Cane : MonoBehaviour
 {
@@ -20,11 +20,18 @@ public partial class Cane : MonoBehaviour
     //quiz Set
     private void OnTriggerEnter(Collider other)
     {
-        //만약 오브젝트에 닿았다면  or 손
+        ////지금 닿은 오브젝트랑 과거 오브젝트랑 비교해서;
+        //QuizObject currentQuizObject =  other.GetComponent<QuizObject>();
+
+
+
         quizObject = other.GetComponent<QuizObject>();
 
-        if (quizObject != null)
+        if (quizObject != null && isSelecting == false)
         {
+
+            isSelecting = true;
+
 
             Debug.Log("지팡이 닿음 문제 세팅");
             quizObject.QuizLoad();
@@ -38,8 +45,8 @@ public partial class Cane : MonoBehaviour
         if (quizObject != null)
         {
             triggerExitEvent?.Invoke();
+            isSelecting = false;
         }
     }
-
 
 }

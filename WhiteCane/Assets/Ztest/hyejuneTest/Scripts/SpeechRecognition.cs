@@ -5,8 +5,16 @@ using UnityEngine.UI;
 using HuggingFace.API;
 using HuggingFace.API.Examples;
 using System.Text.RegularExpressions;
+using UnityEngine.InputSystem;
+
+
 public class SpeechRecognition : MonoBehaviour
 {
+
+    [SerializeField]
+    private InputActionReference recordButton;
+
+
     [SerializeField] private Button startButton;
     [SerializeField] private Button stopButton;
     [SerializeField] private TMP_Text text;
@@ -22,6 +30,24 @@ public class SpeechRecognition : MonoBehaviour
     {
         stopButton.interactable = false;
     }
+
+    //public void RecognizeButton()
+    //{
+    //    selectState = skipButton.action.ReadValue<float>();
+
+    //    if (selectState == 0)
+    //    {
+    //        isActive = true;
+    //    }
+    //    else
+    //    {
+    //        if (isActive)
+    //        {
+    //            SkipButton();
+    //            isActive = false;
+    //        }
+    //    }
+    //}
 
 
     private void Update()
