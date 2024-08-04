@@ -36,31 +36,32 @@ public class ControllerInputAction : MonoBehaviour
     public void Update()
     {
         StickMove();
-        // QuizButton();
-        QuizTestButton();
+         QuizButton();
+     //   QuizTestButton();
     }
 
 
-    public void QuizTestButton()
-    {
-        isSelect = a_Button.action.ReadValue<float>();
+    //public void QuizTestButton()
+    //{
+    //    isSelect = a_Button.action.ReadValue<float>();
 
-        if (isSelect == 0)
-        {
+    //    if (isSelect == 0)
+    //    {
 
-        }
-        else
-        {
-            if (MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition != null)
-            {
-                MainSystem.Instance.ObjectManager.quizObject.QuizCorrect();
-                isButtonActive = false;
+    //    }
+    //    else
+    //    {
+    //        if (MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition != null)
+    //        {
+    //            MainSystem.Instance.ObjectManager.quizObject.QuizCorrect();
+    //            isButtonActive = false;
 
-                Debug.Log("퀴즈버튼 켜기 ++ 임시임 quizbutton이 원래 맞음 ㅇㅋ?");
-            }
-        }
-    }
+    //            Debug.Log("퀴즈버튼 켜기 ++ 임시임 quizbutton이 원래 맞음 ㅇㅋ?");
+    //        }
+    //    }
+    //}
 
+    bool aButtonPress = false;
 
     public void QuizButton()
     {
@@ -73,6 +74,7 @@ public class ControllerInputAction : MonoBehaviour
             {
                 if (MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition != null)
                 {
+                    aButtonPress = false;
                     MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition.StopRecording();
                     isButtonActive = false;
                     Debug.Log("퀴즈버튼 끄기");
@@ -82,12 +84,13 @@ public class ControllerInputAction : MonoBehaviour
         }
         else
         {
-            if (MainSystem.Instance.ObjectManager.quizAcitve)
+            if (MainSystem.Instance.ObjectManager.quizAcitve && aButtonPress==false)
             {
                 MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition.StartRecording();
 
                 MainSystem.Instance.ObjectManager.quizAcitve = false;
 
+                aButtonPress = true;
                 Debug.Log("퀴즈버튼 켜기");
                 Debug.Log(isSelect);
 

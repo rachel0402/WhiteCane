@@ -41,19 +41,19 @@ public partial class QuizObject : MonoBehaviour
 {
     public void Active()
     {
-            MainSystem.Instance.DataManager.QuizData.QuizDataController.ActiveQuizObject(this);
-            currentSpeechRecognition = recordFrame.GetComponent<SpeechRecognition>();
+        MainSystem.Instance.DataManager.QuizData.QuizDataController.ActiveQuizObject(this);
+        currentSpeechRecognition = recordFrame.GetComponent<SpeechRecognition>();
 
 
-            //여기 사운드 출력은 ㄱㅊ지 않음?
+        //여기 사운드 출력은 ㄱㅊ지 않음?
 
-            recordFrame.SetActive(true);
-            activeEvent?.Invoke();
-       
+        recordFrame.SetActive(true);
+        activeEvent?.Invoke();
+
     }
     public void Deactive()
     {
-        Objectcollider.enabled=false;
+        Objectcollider.enabled = false;
         positionParticle.SetActive(false);
         deactiveEvent?.Invoke();
     }
@@ -66,18 +66,18 @@ public partial class QuizObject : MonoBehaviour
             Debug.Log("질문 세팅 or 나레이션 사운드 출력해야함");
             //문제 로드
             //질문 세팅해줌
-                currenQuizObjectInformation = MainSystem.Instance.DataManager.QuizData.GetQuizObjectInformation(quizName);
+            currenQuizObjectInformation = MainSystem.Instance.DataManager.QuizData.GetQuizObjectInformation(quizName);
 
 
-                //setQuiz
-                MainSystem.Instance.ObjectManager.SetQuizObject(this);
+            //setQuiz
+            MainSystem.Instance.ObjectManager.SetQuizObject(this);
 
-                Active();
-           
+            Active();
+
         }
 
     }
- 
+
     public void GetRecohnize()
     {
 
@@ -105,13 +105,15 @@ public partial class QuizObject : MonoBehaviour
 
         if (currenQuizObjectInformation.correctAnswer == answer)
         {
+            QuizCorrect();
             Debug.Log("정답!");
-            isClear = true;
 
-            MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition = null;
 
-            recordFrame.SetActive(false);
-            ObjectVFX.SetActive(true);
+
+            //isClear = true;
+            //MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition = null;
+            //recordFrame.SetActive(false);
+            //ObjectVFX.SetActive(true);
         }
         else
         {
