@@ -32,6 +32,6 @@ public partial class MainSystem : GenericSingleton<MainSystem> //data field
     {
         Initialize();
 
-        SceneManager.LoadScene("TutorialScene");
+        SceneManager.LoadScene("NatureQuiz");
     }
 }
