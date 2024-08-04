@@ -41,7 +41,7 @@ public partial class UINarrationController : MonoBehaviour//initialze
     }
     private void Update()
     {
-        NarrationSkip();
+      //  NarrationSkip();
     }
     public void Initialize()
     {
