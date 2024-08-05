@@ -56,8 +56,6 @@ public partial class SoundData
 {
     public AudioClip GetAudioClip(string narrationName)
     {
-
-        Debug.Log("사운드 스탑도 만들어야해");
         return SoundDataInformationDictonary[narrationName].audioClip;
     }
 }

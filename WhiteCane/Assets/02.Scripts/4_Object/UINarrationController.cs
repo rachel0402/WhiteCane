@@ -41,7 +41,7 @@ public partial class UINarrationController : MonoBehaviour//initialze
     }
     private void Update()
     {
-      //  NarrationSkip();
+        //  NarrationSkip();
     }
     public void Initialize()
     {
@@ -57,23 +57,23 @@ public partial class UINarrationController : MonoBehaviour//fuction
 
     }
 
-    public void NarrationSkip()
-    {
-        selectState = skipButton.action.ReadValue<float>();
+    //public void NarrationSkip()
+    //{
+    //    selectState = skipButton.action.ReadValue<float>();
 
-        if (selectState == 0)
-        {
-            isActive = true;
-        }
-        else
-        {
-            if (isActive)
-            {
-                SkipButton();
-                isActive = false;
-            }
-        }
-    }
+    //    if (selectState == 0)
+    //    {
+    //        isActive = true;
+    //    }
+    //    else
+    //    {
+    //        if (isActive)
+    //        {
+    //            SkipButton();
+    //            isActive = false;
+    //        }
+    //    }
+    //}
     public void DynamicAllocateUINarrationStep(UINarrationStep uINarrationStepValue)
     {
         currentUINarrationStep = uINarrationStepValue;
@@ -85,7 +85,7 @@ public partial class UINarrationController : MonoBehaviour//fuction
 
     public void Active()
     {
-      //  SetFrameActiveState(true); 하면 ㄴㄴ
+        //  SetFrameActiveState(true); 하면 ㄴㄴ
         activeEvent?.Invoke();
     }
     public void Deactive()
@@ -101,7 +101,7 @@ public partial class UINarrationController : MonoBehaviour//fuction
     }
     public void SetNarrationSound(string narrationName)
     {
-        Debug.Log("사운드 넣을꺼면 여기로 고고");
+        isReturn = false;
 
         audioSource.clip = MainSystem.Instance.DataManager.SoundData.GetAudioClip(narrationName);
         audioSource.Play();
@@ -109,12 +109,16 @@ public partial class UINarrationController : MonoBehaviour//fuction
 
     }
 
-
+    bool isReturn = false;
 
     private IEnumerator waitAudio()
     {
         yield return new WaitForSeconds(audioSource.clip.length);
-        SkipButton();
-        print("사운드 끝");
+
+        if (isReturn == false)
+        {
+            SkipButton();
+            isReturn = true;
+        }
     }
 }
