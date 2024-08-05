@@ -48,6 +48,9 @@ public partial class UINarrationStep : MonoBehaviour
     public void SkipButtonActive()
     {
         isSkipActive = true;
+
+        Debug.Log("SkipButtonActive");
+
     }
     public void Initialize()
     {
@@ -91,6 +94,8 @@ public partial class UINarrationStep : MonoBehaviour
    
     public void NextStep()
     {
+        Debug.Log("NextStep");
+
         //NARRATION INDEX를 맨 상위에서 불러야할듯
 
         if (narrationStepIndex == narrationMaxIndex)
