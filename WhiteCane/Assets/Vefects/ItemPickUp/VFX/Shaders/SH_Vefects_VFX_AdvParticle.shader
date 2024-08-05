@@ -434,10 +434,10 @@ Shader "Vefects/SH_Vefects_VFX_AdvParticle"
 				float2 panner320 = ( windSpeed200 * _GradientColor_Speed + ( texCoord317 * _GradientColor_Scale ));
 				float4 lerpResult285 = lerp( _ColorBottom , _ColorTop , tex2D( _ColorGradientMask, panner320 ).r);
 				float4 Color329 = lerpResult285;
-				float temp_output_227_0 = saturate( ( pow( tex2DNode214.r , _Mask_Power ) * _Mask_Multiply ) );
+				float temp_output_227_0 = saturate( ( pow(abs( tex2DNode214.r) , _Mask_Power ) * _Mask_Multiply ) );
 				float2 texCoord26 = IN.ase_texcoord3.xy * float2( 1,1 ) + float2( 0,0 );
 				float2 panner78 = ( windSpeed200 * _Noise_01_Speed + ( texCoord26 * _Noise_01_Scale ));
-				float noises205 = saturate( ( pow( tex2D( _Noise_01_Texture, ( panner78 + Distortion64 ) ).r , _Noises_Power ) * _Noises_Multiply ) );
+				float noises205 = saturate( ( pow(abs( tex2D( _Noise_01_Texture, ( panner78 + Distortion64 ) ).r) , _Noises_Power ) * _Noises_Multiply ) );
 				float lerpResult339 = lerp( temp_output_227_0 , noises205 , _Erosion_Intensity);
 				float clampResult341 = clamp( lerpResult339 , 0.0 , 1.0 );
 				float temp_output_344_0 = saturate( ( ( temp_output_227_0 - ( _Erosion_Sub + IN.ase_texcoord3.z ) ) * clampResult341 ) );
@@ -725,10 +725,10 @@ Shader "Vefects/SH_Vefects_VFX_AdvParticle"
 				float Distortion64 = ( ( tex2D( _NoiseDistortion_Texture, panner79 ).r * 0.1 ) * _DistortionAmount );
 				float2 texCoord216 = IN.ase_texcoord2.xy * _Mask_Scale + _Mask_Offset;
 				float4 tex2DNode214 = tex2D( _Mask_Texture, ( ( Distortion64 * _DistortionMaskIntensity ) + texCoord216 ) );
-				float temp_output_227_0 = saturate( ( pow( tex2DNode214.r , _Mask_Power ) * _Mask_Multiply ) );
+				float temp_output_227_0 = saturate( ( pow(abs( tex2DNode214.r ), _Mask_Power ) * _Mask_Multiply ) );
 				float2 texCoord26 = IN.ase_texcoord2.xy * float2( 1,1 ) + float2( 0,0 );
 				float2 panner78 = ( windSpeed200 * _Noise_01_Speed + ( texCoord26 * _Noise_01_Scale ));
-				float noises205 = saturate( ( pow( tex2D( _Noise_01_Texture, ( panner78 + Distortion64 ) ).r , _Noises_Power ) * _Noises_Multiply ) );
+				float noises205 = saturate( ( pow(abs( tex2D( _Noise_01_Texture, ( panner78 + Distortion64 ) ).r ), _Noises_Power ) * _Noises_Multiply ) );
 				float lerpResult339 = lerp( temp_output_227_0 , noises205 , _Erosion_Intensity);
 				float clampResult341 = clamp( lerpResult339 , 0.0 , 1.0 );
 				float temp_output_344_0 = saturate( ( ( temp_output_227_0 - ( _Erosion_Sub + IN.ase_texcoord2.z ) ) * clampResult341 ) );
