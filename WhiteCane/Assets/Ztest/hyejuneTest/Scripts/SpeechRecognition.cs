@@ -19,6 +19,8 @@ public class SpeechRecognition : MonoBehaviour
     [SerializeField] private Button stopButton;
     [SerializeField] private TMP_Text text;
 
+    [SerializeField] private GameObject micImage;
+
     private string recognizeResponse;
     private bool isResponseFirst = true;
 
@@ -63,6 +65,9 @@ public class SpeechRecognition : MonoBehaviour
         isResponseFirst = true;
         text.color = Color.white;
         text.text = "Recording...";
+
+        micImage.gameObject.SetActive(true);
+
         startButton.interactable = false;
         stopButton.interactable = true;
         clip = Microphone.Start(null, false, 10, 44100);
@@ -86,13 +91,18 @@ public class SpeechRecognition : MonoBehaviour
     {
         text.color = Color.yellow;
         text.text = "Sending...";
+
+        micImage.gameObject.SetActive(true);
+
         stopButton.interactable = false;
 
         HuggingFaceAPI.AutomaticSpeechRecognition(bytes, response => {
             text.color = Color.white;
             text.text = response;
+            micImage.gameObject.SetActive(false);
 
-        if (isResponseFirst)
+
+            if (isResponseFirst)
             {
                 recognizeResponse = response.Trim();//공백제거
 
