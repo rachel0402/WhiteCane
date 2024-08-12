@@ -4070,7 +4070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.data[0]
@@ -6307,7 +6307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.data[0]
@@ -26130,7 +26130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.data[0]
@@ -26142,7 +26142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.data[2]
-      value: deepSea08
+      value: memories07
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.data[3]
@@ -46062,7 +46062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1651657040222922041, guid: 5a8a5c22ee1e6ea4aacb1848e026b560, type: 3}
       propertyPath: narrationIndexList.Array.data[0]
