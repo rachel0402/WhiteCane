@@ -48,7 +48,7 @@ MonoBehaviour:
   scannerObject: {fileID: 2428879677635104979}
   Particle: {fileID: 109176334023185948}
   time: 0
-  fin: 1.5
+  fin: 2
 --- !u!1 &3728508924870578224
 GameObject:
   m_ObjectHideFlags: 0
