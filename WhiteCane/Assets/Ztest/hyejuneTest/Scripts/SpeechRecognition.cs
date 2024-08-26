@@ -83,6 +83,7 @@ public class SpeechRecognition : MonoBehaviour
         bytes = EncodeAsWAV(samples, clip.frequency, clip.channels);
         recording = false;
         SendRecording();
+        micImage.gameObject.SetActive(false);
 
 
     }

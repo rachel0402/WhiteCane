@@ -19,6 +19,7 @@ public class ControllerInputAction : MonoBehaviour
     bool isButtonActive = false;
 
     float isSelect = 0;
+    float isTestSelect = 0;
 
 
     private Vector2 inputStickValue;
@@ -37,29 +38,31 @@ public class ControllerInputAction : MonoBehaviour
     {
         StickMove();
          QuizButton();
-     //   QuizTestButton();
+        QuizTestButton();
     }
 
 
-    //public void QuizTestButton()
-    //{
-    //    isSelect = a_Button.action.ReadValue<float>();
+    public void QuizTestButton()
+    {
 
-    //    if (isSelect == 0)
-    //    {
+        //이거야 스킵 b
+        isTestSelect = b_Button.action.ReadValue<float>();
 
-    //    }
-    //    else
-    //    {
-    //        if (MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition != null)
-    //        {
-    //            MainSystem.Instance.ObjectManager.quizObject.QuizCorrect();
-    //            isButtonActive = false;
+        if (isTestSelect == 0)
+        {
 
-    //            Debug.Log("퀴즈버튼 켜기 ++ 임시임 quizbutton이 원래 맞음 ㅇㅋ?");
-    //        }
-    //    }
-    //}
+        }
+        else
+        {
+            if (MainSystem.Instance.ObjectManager.quizObject.currentSpeechRecognition != null)
+            {
+                MainSystem.Instance.ObjectManager.quizObject.QuizCorrect();
+                isButtonActive = false;
+
+                Debug.Log("퀴즈버튼 켜기 ++ 임시임 quizbutton이 원래 맞음 ㅇㅋ?");
+            }
+        }
+    }
 
     bool aButtonPress = false;
 

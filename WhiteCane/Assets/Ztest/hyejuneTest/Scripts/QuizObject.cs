@@ -32,7 +32,8 @@ public partial class QuizObject : MonoBehaviour
     private UnityEvent activeEvent;
     [SerializeField]
     private UnityEvent deactiveEvent;
-
+    [SerializeField]
+    private UnityEvent incorrectEvent;
     private bool isClear = false;
 
 
@@ -96,7 +97,6 @@ public partial class QuizObject : MonoBehaviour
     public void QuizINCorrect()
     {
         Debug.Log("틀렸어요");
-
     }
 
     public void CheckAnswer(string answer)
@@ -117,6 +117,7 @@ public partial class QuizObject : MonoBehaviour
         }
         else
         {
+            incorrectEvent?.Invoke();
 
             Debug.Log("틀렸어요");
             //틀린소리
