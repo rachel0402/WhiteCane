@@ -48,6 +48,7 @@
 		{"index":"memories04", "narrationText":"이 동물은 무엇일까요?"},
 		{"index":"memories05", "narrationText":"잘하셨습니다. 마지막으로 만나신 존재는 앵무새입니다."},
 		{"index":"memories06", "narrationText":"의미있는 시간을 보내셨나요? "},
-		{"index":"memories07", "narrationText":"앵무새는 상대방의 말에 귀를 기울이고 그 소리를 오랫동안 기억한다고 합니다. 조금 더 따뜻한 세상을 만들기 위해 우리 사회의 소외된 목소리들에도 귀를 귀울여 보는 것은 어떨까요?"}
+		{"index":"memories07", "narrationText":"앵무새는 상대방의 말에 귀를 기울이고 그 소리를 오랫동안 기억한다고 합니다. 조금 더 따뜻한 세상을 만들기 위해 우리 사회의 소외된 목소리들에도 귀를 귀울여 보는 것은 어떨까요?"},
+		{"index":"oscaNO", "narrationText":"다시 생각해보세요"}
 	]
 }
